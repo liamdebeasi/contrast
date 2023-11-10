@@ -1,0 +1,11 @@
+:root {
+  font-family: monospace;
+}
+
+body {
+  margin: 0;
+  
+  overflow: hidden;
+  
+  font-size: 20px;
+}
