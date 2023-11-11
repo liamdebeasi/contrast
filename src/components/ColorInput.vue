@@ -36,7 +36,7 @@
     
     text-transform: uppercase;
     
-    width: 60px;  
+    width: 100px;  
     
     font-size: 1rem;  
     font-family: inherit;
