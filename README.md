@@ -1,18 +1,63 @@
-# Vue 3 + TypeScript + Vite
+<p align="center">
+   <h1 align="center">
+      Contrast
+   </h1>
+</p>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<p align="center">
+   Ensure colors pass WCAG Color Contrast guidelines. 
+   
+   Contrast allows you to quickly know if foreground and background colors pass accessibility guidelines defined by the W3C. It reports if the colors chosen pass normal text, large text, and UI component requirements as well as what level they pass (A, AA, or AAA). 
+</p>
 
-## Recommended IDE Setup
+## Usage
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Contrast is available on the web: http://liamdebeasi.github.io/contrast/
 
-## Type Support For `.vue` Imports in TS
+I recommend [installing Contrast as a Progressive Web App (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Installing#installing_pwas) for easier access. This will allow you to add a shortcut to your home screen or dock and run Contrast as a standalone application.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+Contrast can also be used offline and will automatically update when bug fixes and new features are available.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Browser Support
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+| Browser | Version |
+| - | - |
+| Safari | 16+ [^1] |
+| Chrome/Edge | 100+ [^2] |
+| Firefox | 100+ [^1] |
+
+## Local Development
+
+### Install dependencies
+
+```shell
+pnpm install
+```
+
+### Run dev server
+
+```shell
+pnpm run dev
+```
+
+### Testing Changes
+
+Contrast uses [Playwright](https://playwright.dev) and [Axe](https://github.com/dequelabs/axe-core) for testing.
+
+```shell
+# Installs the latest browsers if needed. 
+# You only need to do this on first setup and
+# whenever the Playwright dependency is updated.
+pnpm playwright install
+
+# Run tests
+pnpm run test
+```
+
+## Acknowledgments
+
+Contrast was inspired by https://contrasteapp.com. Thanks for making such a great app!
+
+[^1]: As of November 2023, Safari and Firefox do not support the [EyeDropper API](https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper), so the eye dropper feature is not available in those browsers.
+
+[^2]: As of November 2023, there is a known bug in Blink (the engine that powers Chrome and Edge) that causes the color palette picker to not appear when Contrast is installed on macOS. This issue should be resolved with the upcoming Chrome v121 release. See https://bugs.chromium.org/p/chromium/issues/detail?id=1488347 for more information.
