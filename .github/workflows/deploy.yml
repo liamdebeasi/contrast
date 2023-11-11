@@ -21,10 +21,11 @@ jobs:
         run: |
           tar \
             --dereference --hard-dereference \
-            --directory "/dist" \
+            --directory "dist/" \
             -cvf "$RUNNER_TEMP/artifact.tar" \
             --exclude=.git \
             --exclude=.github \
+            .
         shell: sh
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
