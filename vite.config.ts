@@ -13,6 +13,7 @@ export default defineConfig({
       }
     }),
     VitePWA({
+      injectRegister: 'auto',
       registerType: 'autoUpdate',
       manifest: {
         icons: [
