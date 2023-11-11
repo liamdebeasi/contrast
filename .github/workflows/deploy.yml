@@ -1,7 +1,7 @@
 name: Deploy application to GitHub Pages
 on: workflow_dispatch
 jobs:
-  Build-And-Deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -34,3 +34,16 @@ jobs:
           path: ${{ runner.temp }}/artifact.tar
           retention-days: 1
           if-no-files-found: error
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
