@@ -10,16 +10,17 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "@axe-core/playwright": "^4.8.1",
-    "@vite-pwa/assets-generator": "^0.0.10",
+    "color-contrast-calc": "^0.4.1",
     "ionicons": "^7.2.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.8.1",
     "@playwright/test": "^1.39.0",
     "@types/node": "^20.9.0",
+    "@vite-pwa/assets-generator": "^0.0.10",
     "@vitejs/plugin-vue": "^4.2.3",
-    "color-contrast-calc": "^0.4.1",
+    "generator": "link:@vite-pwa@assets/generator",
     "serve": "^14.2.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
