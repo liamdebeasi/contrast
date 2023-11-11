@@ -14,6 +14,7 @@ export default defineConfig({
       }
     }),
     VitePWA({
+      name: 'Contrast',
       injectRegister: 'auto',
       registerType: 'autoUpdate',
       manifest: {
