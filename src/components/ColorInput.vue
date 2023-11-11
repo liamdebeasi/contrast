@@ -42,8 +42,10 @@
     font-family: inherit;
   }
   
-  input:hover {
-    border: 1px solid var(--border-color);
+  @media (any-hover: hover) {
+    input:hover {
+      border: 1px solid var(--border-color);
+    }
   }
   
   input:focus-visible {

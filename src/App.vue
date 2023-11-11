@@ -168,20 +168,22 @@ updateMetaThemeColor();
     margin-right: 0px;
   }
   
-  .foreground.color-row button:hover {
-    background: var(--foreground-tint);
-  }
-  
-  .background.color-row button:hover {
-    background: var(--background-tint);
-  }
-  
-  .foreground.color-row button:focus-visible {
-    background: var(--foreground-shade);
-  }
-  
-  .background.color-row button:focus-visible {
-    background: var(--background-shade);
+  @media (any-hover: hover) {
+    .foreground.color-row button:hover {
+      background: var(--foreground-tint);
+    }
+    
+    .background.color-row button:hover {
+      background: var(--background-tint);
+    }
+    
+    .foreground.color-row button:focus-visible {
+      background: var(--foreground-shade);
+    }
+    
+    .background.color-row button:focus-visible {
+      background: var(--background-shade);
+    }
   }
   
   .main-content {
