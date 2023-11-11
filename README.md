@@ -58,6 +58,6 @@ pnpm run test
 
 Contrast was inspired by https://contrasteapp.com. Thanks for making such a great app!
 
-[^1]: As of November 2023, Safari and Firefox do not support the [EyeDropper API](https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper), so the eye dropper feature is not available in those browsers.
+[^1]: As of November 2023, Safari and Firefox do not support the [EyeDropper API](https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper), so the eye dropper feature is not available in those browsers. However, using the color palette picker lets you access an eye dropper tool once the color palette picker menu appears.
 
 [^2]: As of November 2023, there is a known bug in Blink (the engine that powers Chrome and Edge) that causes the color palette picker to not appear when Contrast is installed on macOS. This issue should be resolved with the upcoming Chrome v121 release. See https://bugs.chromium.org/p/chromium/issues/detail?id=1488347 for more information.
