@@ -1,0 +1,34 @@
+name: Deploy application to GitHub Pages
+on: workflow_dispatch
+jobs:
+  Build-And-Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with: latest
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Install Dependencies
+        run: pnpm install
+        shell: sh
+      - name: Build Application
+        run: pnpm run build
+        shell: sh
+      - name: Archive Application
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory "/dist" \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+        shell: sh
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: contrast-app
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
