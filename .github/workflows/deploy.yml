@@ -2,7 +2,7 @@ name: Deploy application to GitHub Pages
 
 on: workflow_dispatch
 
-permisions:
+permissions:
   contents: read
   pages: write
   id-token: write
