@@ -8,7 +8,13 @@
   
   const openPicker = () => {
     try {
+      
+      /**
+       * showPicker is not implemented on iOS
+       * yet: https://bugs.webkit.org/show_bug.cgi?id=261703
+       */
       inputEl.value.showPicker();
+      inputEl.value.focus();
     } catch (e) {
       throw e;
     }
@@ -20,7 +26,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="button-wrapper">
     <button @click="openPicker()" class="color-picker-button" title="Open color picker" aria-label="Open color picker">
       <ion-icon aria-hidden="true" name="color-palette"></ion-icon>
     </button>
@@ -36,8 +42,21 @@
 </template>
 
 <style scoped>
+  .button-wrapper {
+    position: relative;
+  }
+
   input[type=color] {
     position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    width: 100%;
+    height: 100%;
+    
     opacity: 0;
     pointer-events: none;
   }
