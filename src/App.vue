@@ -196,6 +196,8 @@ updateMetaThemeColor();
     
     background: var(--background);
     color: var(--foreground);
+    
+    padding-top: env(safe-area-inset-top);
   }
   
   .bottom-bar {
@@ -206,7 +208,9 @@ updateMetaThemeColor();
     align-items: center;
     
     background: var(--foreground);
-    color: var(--background);    
+    color: var(--background); 
+    
+    padding-bottom: env(safe-area-inset-bottom);   
   }
   
   .bottom-bar .color-row {
