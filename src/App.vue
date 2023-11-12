@@ -154,7 +154,7 @@ updateMetaThemeColor();
     
     text-transform: uppercase;
     font-family: inherit;
-    font-size: 1.875rem;
+    font-size: 1.6rem;
   
     display: flex;
     align-items: center;
@@ -199,7 +199,7 @@ updateMetaThemeColor();
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
     
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
   
   .bottom-bar {
