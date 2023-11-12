@@ -29,10 +29,19 @@
   <div class="app-icon" v-if="!showCopyButton">
     <ion-icon aria-label="Color copied to clipboard" name="checkmark" class="checkmark"></ion-icon>
   </div>
+  <div class="status" role="status" aria-live="assertive">
+    <p v-if="!showCopyButton">Color copied to clipboard</p>
+  </div>
 </template>
 
 <style scoped>
   .checkmark {
     cursor: default;
+  }
+  
+  .status {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
   }
 </style>
