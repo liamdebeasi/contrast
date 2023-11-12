@@ -1,11 +1,10 @@
-import { defineConfig, minimalPreset as preset } from '@vite-pwa/assets-generator/config'
-
+import { defineConfig } from '@vite-pwa/assets-generator/config'
 
 export default defineConfig({
   preset: {
     transparent: {
       sizes: [64, 192, 512],
-      favicons: [[64, 'favicon.ico']],
+      favicons: [[64, 'favicon.ico']],
       padding: 0
     },
     maskable: {
