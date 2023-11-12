@@ -10,6 +10,8 @@
    Contrast allows you to quickly know if foreground and background colors pass accessibility guidelines defined by the W3C. It reports if the colors chosen pass normal text, large text, and UI component requirements as well as what level they pass (A, AA, or AAA). 
 </p>
 
+<img src="./assets/contrast.png" />
+
 ## Usage
 
 Contrast is available on the web: http://liamdebeasi.github.io/contrast/
