@@ -1,5 +1,5 @@
 <script setup lang="ts">  
-  defineProps(['modelValue']);
+  const props = defineProps(['modelValue', 'hint']);
   const emit = defineEmits(['update:modelValue']);
   
   const supportsEyeDropper = !!(window as any).EyeDropper;
@@ -17,7 +17,7 @@
 </script>
 
 <template>
-  <button v-if="supportsEyeDropper" class="eyedropper-button" aria-label="Select color" @click="selectColor()">
+  <button v-if="supportsEyeDropper" class="eyedropper-button" :title="props.hint" :aria-label="props.hint" @click="selectColor()">
     <ion-icon aria-hidden="true" name="eyedrop"></ion-icon>
   </button>
 </template>

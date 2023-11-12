@@ -1,6 +1,7 @@
 <script setup lang="ts">  
   const props = defineProps({
     color: String,
+    hint: String
   });
   
   const copyBackground = async () => {
@@ -9,7 +10,7 @@
 </script>
 
 <template>
-  <button class="copy-color-button" title="Copy color to clipboard" aria-label="Copy color to clipboard" @click="copyBackground()">
+  <button class="copy-color-button" :title="props.hint" :aria-label="props.hint" @click="copyBackground()">
     <ion-icon aria-hidden="true" name="clipboard"></ion-icon>
   </button>
 </template>

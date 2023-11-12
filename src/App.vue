@@ -70,24 +70,24 @@ updateMetaThemeColor();
       </div>
       <div class="foreground color-row">
         <div class="button-group">
-          <DropperButton v-model="background" />
-          <CopyButton :color="background" />
-          <ColorInput id="background-input" v-model="background" />
+          <DropperButton v-model="background" hint="Open eye dropper tool to select background color" />
+          <CopyButton :color="background" hint="Copy background color to clipboard" />
+          <ColorInput id="background-input" v-model="background" hint="Enter a hex color for the background color" />
         </div>
         <div class="button-group">
-          <PaletteButton v-model="background" />
+          <PaletteButton v-model="background" hint="Open color palette to select background color" />
         </div> 
        </div>
     </div>
     <div class="bottom-bar">
       <div class="background color-row">
           <div class="button-group">
-            <DropperButton v-model="foreground" />
-            <CopyButton :color="foreground" />
-            <ColorInput id="foreground-input" v-model="foreground" />
+            <DropperButton v-model="foreground" hint="Open eye dropper tool to select foreground color" />
+            <CopyButton :color="foreground" hint="Copy foreground color to clipboard" />
+            <ColorInput id="foreground-input" v-model="foreground" hint="Enter a hex color for the foreground color" />
           </div>
           <div class="button-group">
-            <PaletteButton v-model="foreground" />
+            <PaletteButton v-model="foreground" hint="Open color palette to select foreground color" />
           </div>
       </div>
     </div>

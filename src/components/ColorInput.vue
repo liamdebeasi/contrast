@@ -1,5 +1,5 @@
 <script setup lang="ts">  
-  defineProps(['modelValue']);
+  const props = defineProps(['modelValue', 'hint']);
   const emit = defineEmits(['update:modelValue']);
   
   const onChange = (ev: Event) => {
@@ -13,7 +13,7 @@
 
 <template>
   <input
-    aria-label="Enter a hex color"
+    :aria-label="props.hint"
     type="text" 
     :value="modelValue"
     @change="onChange($event)"

@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from 'vue';
   
-  defineProps(['modelValue']);
+  const props = defineProps(['modelValue', 'hint']);
   const emit = defineEmits(['update:modelValue']);
 
   const inputEl = ref();
@@ -27,7 +27,7 @@
 
 <template>
   <div class="button-wrapper">
-    <button @click="openPicker()" class="color-picker-button" title="Open color picker" aria-label="Open color picker">
+    <button @click="openPicker()" class="color-picker-button" :title="props.hint" :aria-label="props.hint">
       <ion-icon aria-hidden="true" name="color-palette"></ion-icon>
     </button>
     <input
