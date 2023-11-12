@@ -59,6 +59,8 @@ The color contrast ratio will be displayed at the top of the screen. The color c
 | Chrome/Edge | 100+ [^2] |
 | Firefox | 100+ [^1] |
 
+Contrast likely works on older versions of these browsers. However, I work on this project in my free time, so I intentionally kept the browser support scope narrow.
+
 ## Local Development
 
 ### Install dependencies
