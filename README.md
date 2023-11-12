@@ -23,6 +23,34 @@ I recommend [installing Contrast as a Progressive Web App (PWA)](https://develop
 
 Contrast can also be used offline and will automatically update when bug fixes and new features are available.
 
+### Selecting Colors
+
+**Eye Dropper**
+
+The eyedropper tool can be used to select a specific color anywhere on your screen, even if the color is displayed outside of Contrast. [^1]
+
+**Text Input**
+
+The selected foreground and background colors are displayed in their respective inputs. However, these inputs can be edited to any valid hex color.
+
+**Color Palette**
+
+The color palette tool can be used to bring up the browser's native color picker for more advanced color selection.
+
+### Copying Colors
+
+The clipboard icon can be used to copy the foreground or background color to your clipboard for usage outside of the app.
+
+### Viewing Results
+
+The color contrast ratio will be displayed at the top of the screen. The color contrast levels for each type of web content test will be displayed below that. The table below lists the possible results for each content type:
+
+| Content Type | Possible Values |
+| - | - |
+| Small Text | A/Fail, AA, AAA |
+| Large Text | A/Fail, AA, AAA |
+| UI Components | A/Fail, AA |
+
 ## Browser Support
 
 | Browser | Version |
