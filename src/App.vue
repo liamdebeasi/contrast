@@ -23,8 +23,8 @@ const getContrast = () => {
   return ratio.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
 }
 
-const foreground = ref('#e7c296');
-const background = ref('#29344b');
+const foreground = ref('#f5e8c8');
+const background = ref('#4c3163');
 const contrast = ref(getContrast())
 const metaThemeColor = document.querySelector('meta[name=theme-color]') as HTMLMetaElement;
 
