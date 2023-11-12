@@ -3,7 +3,7 @@ import type { Preset } from '@vite-pwa/assets-generator/config';
 
 export const customPreset: Preset = {
   transparent: {
-    sizes: [64, 192, 512],
+    sizes: [192, 512],
     favicons: [[64, 'favicon.ico']]
   },
   maskable: {
