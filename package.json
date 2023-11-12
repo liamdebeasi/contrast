@@ -8,7 +8,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "test": "playwright test",
-    "generate-assets": "pwa-assets-generator --preset minimal public/contrast-logo.svg"
+    "generate-assets": "pwa-assets-generator"
   },
   "dependencies": {
     "color-contrast-calc": "^0.4.1",
