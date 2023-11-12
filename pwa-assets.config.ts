@@ -1,20 +1,7 @@
-import { defineConfig } from '@vite-pwa/assets-generator/config'
-import type { Preset } from '@vite-pwa/assets-generator/config';
+import { defineConfig, minimalPreset as preset } from '@vite-pwa/assets-generator/config'
 
-export const customPreset: Preset = {
-  transparent: {
-    sizes: [192, 512],
-    favicons: [[64, 'favicon.ico']]
-  },
-  maskable: {
-    sizes: [512]
-  },
-  apple: {
-    sizes: [256]
-  }
-}
 
 export default defineConfig({
-  preset: customPreset,
+  preset,
   images: ['public/contrast-logo.svg']
 })
