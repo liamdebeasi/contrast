@@ -139,7 +139,7 @@ updateMetaThemeColor();
     display: flex;
   }
   
-  button {
+  .app-icon {
     appearance: none;
     cursor: pointer;
     

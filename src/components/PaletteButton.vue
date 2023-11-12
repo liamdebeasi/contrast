@@ -27,7 +27,7 @@
 
 <template>
   <div class="button-wrapper">
-    <button @click="openPicker()" class="color-picker-button" :title="props.hint" :aria-label="props.hint">
+    <button @click="openPicker()" class="app-icon" :title="props.hint" :aria-label="props.hint">
       <ion-icon aria-hidden="true" name="color-palette"></ion-icon>
     </button>
     <input

@@ -4,10 +4,10 @@ import App from './App.vue'
 
 import { defineCustomElement } from 'ionicons/components/ion-icon.js';
 import { addIcons } from 'ionicons';
-import { eyedrop, clipboard, colorPalette } from 'ionicons/icons';
+import { checkmark, eyedrop, clipboard, colorPalette } from 'ionicons/icons';
 
 defineCustomElement();
-addIcons({ eyedrop, clipboard, colorPalette });
+addIcons({ checkmark, eyedrop, clipboard, colorPalette });
 
 
 window.resizeTo(500, 375);

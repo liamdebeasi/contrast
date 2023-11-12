@@ -17,7 +17,7 @@
 </script>
 
 <template>
-  <button v-if="supportsEyeDropper" class="eyedropper-button" :title="props.hint" :aria-label="props.hint" @click="selectColor()">
+  <button v-if="supportsEyeDropper" class="app-icon" :title="props.hint" :aria-label="props.hint" @click="selectColor()">
     <ion-icon aria-hidden="true" name="eyedrop"></ion-icon>
   </button>
 </template>
