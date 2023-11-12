@@ -3,7 +3,18 @@
   const emit = defineEmits(['update:modelValue']);
   
   const onChange = (ev: Event) => {
-    emit('update:modelValue', (ev.target as HTMLInputElement).value)  
+    let value = (ev.target as HTMLInputElement).value;
+    
+    /**
+     * Values should be hex colors, so
+     * add a # at the beginning so the user
+     * does not need to keep typing it.
+     */
+    if (value.substr(0, 1) !== '#') {
+      value = `#${value}`;
+    }
+    
+    emit('update:modelValue', value);  
   }
   
   const onFocus = (ev: Event) => {

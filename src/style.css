@@ -8,6 +8,13 @@
    */
   position: fixed;
   width: 100%;
+  
+  /**
+   * Disables text selection
+   * for a more app-like experience.
+   */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 body {

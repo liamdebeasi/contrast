@@ -1,11 +1,12 @@
 <p align="center">
+   <img src="./assets/logo.png" width="125" />
    <h1 align="center">
       Contrast
    </h1>
 </p>
 
 <p align="center">
-   Ensure colors pass WCAG Color Contrast guidelines 
+   Ensure colors pass WCAG color contrast guidelines 
    
    Contrast allows you to quickly know if foreground and background colors pass accessibility guidelines defined by the W3C. It reports if the colors chosen pass normal text, large text, and UI component requirements as well as what level they pass (A, AA, or AAA). 
 </p>
@@ -20,7 +21,35 @@ Contrast is available on the web: http://liamdebeasi.github.io/contrast/
 
 I recommend [installing Contrast as a Progressive Web App (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Installing#installing_pwas) for easier access. This will allow you to add a shortcut to your home screen or dock and run Contrast as a standalone application.
 
-Contrast can also be used offline and will automatically update when bug fixes and new features are available.
+Contrast will automatically update when bug fixes and new features are available and can also be used offline.
+
+### Selecting Colors
+
+**Eye Dropper**
+
+The eyedropper tool can be used to select a specific color anywhere on your screen, even if the color is displayed outside of Contrast. [^1]
+
+**Text Input**
+
+The selected foreground and background colors are displayed in their respective inputs. However, these inputs can be edited to any valid hex color.
+
+**Color Palette**
+
+The color palette tool can be used to bring up the browser's native color picker for more advanced color selection.
+
+### Copying Colors
+
+The clipboard icon can be used to copy the foreground or background color to your clipboard for usage outside of the app.
+
+### Viewing Results
+
+The color contrast ratio will be displayed at the top of the screen. The color contrast levels for each type of web content test will be displayed below that. The table below lists the possible results for each content type:
+
+| Content Type | Possible Values |
+| - | - |
+| Small Text | A/Fail, AA, AAA |
+| Large Text | A/Fail, AA, AAA |
+| UI Components | A/Fail, AA |
 
 ## Browser Support
 
@@ -29,6 +58,8 @@ Contrast can also be used offline and will automatically update when bug fixes a
 | Safari | 16+ [^1] |
 | Chrome/Edge | 100+ [^2] |
 | Firefox | 100+ [^1] |
+
+Contrast likely works on older versions of these browsers. However, I work on this project in my free time, so I intentionally kept the browser support scope narrow.
 
 ## Local Development
 
@@ -57,6 +88,10 @@ pnpm playwright install
 # Run tests
 pnpm run test
 ```
+
+## Contributing
+
+My day job involves building [Ionic Framework](http://github.com/ionic-team/ionic-framework), so I will fix bugs, add new features, and respond to questions as time allows. If you see a bug, please feel free to submit a pull request!
 
 ## Acknowledgments
 
