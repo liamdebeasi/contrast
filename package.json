@@ -1,5 +1,5 @@
 {
-  "name": "contrast",
+  "name": "Contrast",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "test": "playwright test"
+    "test": "playwright test",
+    "generate-assets": "pwa-assets-generator --preset minimal public/contrast-logo.svg"
   },
   "dependencies": {
     "color-contrast-calc": "^0.4.1",
