@@ -25,6 +25,16 @@ const getContrast = () => {
 
 const foreground = ref('#f5e8c8');
 const background = ref('#4c3163');
+
+/**
+ * These refs allow us to change the text colors
+ * on the UI in the event that the user chooses foreground
+ * and background colors that have low contrast. Without
+ * this, the text likely may not be readable.
+ */
+const foregroundTextColor = ref(background.value);
+const backgroundTextColor = ref(foreground.value);
+
 const contrast = ref(getContrast())
 const metaThemeColor = document.querySelector('meta[name=theme-color]') as HTMLMetaElement;
 
@@ -51,7 +61,38 @@ const computePass = ([aaThreshold, aaaThreshold]: [number, number | undefined]) 
  */
 watch([foreground, background], () => {
   updateMetaThemeColor();
-  contrast.value = getContrast();
+  const ratio = contrast.value = getContrast();
+  
+  /**
+   * Typically the textColor refs are the
+   * same as the background/foreground refs.
+   * However, if the color contrast is < 3
+   * then the text likely won't be readable.
+   * As a result, we may need to change the color
+   * to either white or black so it is readable.
+   */
+  if (ratio <= 3) {
+    
+    /**
+     * Compare white text and black text contrast on chosen
+     * background and use whichever one has the higher ratio.
+     */
+    const whiteForegroundRGB = ColorContrastCalc.colorFrom('#ffffff');
+    const blackForegroundRGB = ColorContrastCalc.colorFrom('#000000');
+    const backgroundRGB = ColorContrastCalc.colorFrom(background.value);
+    
+    const whiteRatio = whiteForegroundRGB.contrastRatioAgainst(backgroundRGB);
+    const blackRatio = blackForegroundRGB.contrastRatioAgainst(backgroundRGB);
+    
+    if (whiteRatio >= blackRatio) {
+      foregroundTextColor.value = backgroundTextColor.value = '#ffffff';
+    } else {
+      foregroundTextColor.value = backgroundTextColor.value = '#000000';
+    }
+  } else {
+    foregroundTextColor.value = background.value;
+    backgroundTextColor.value = foreground.value;
+  }
 });
 
 updateMetaThemeColor();
@@ -59,7 +100,16 @@ updateMetaThemeColor();
 </script>
 
 <template>
-  <main :style="{ '--background': background, '--foreground': foreground, '--background-tint': background + '30', '--foreground-tint': foreground + '30', '--background-shade': background + '50', '--foreground-shade': foreground + '50' }">
+  <main :style="{
+    '--foreground-text-color': foregroundTextColor,
+    '--background-text-color': backgroundTextColor,
+    '--foreground-text-color-tint': foregroundTextColor + '30',
+    '--foreground-text-color-shade': foregroundTextColor + '50',
+    '--background-text-color-tint': backgroundTextColor + '30',
+    '--background-text-color-shade': backgroundTextColor + '50',
+    '--background': background, 
+    '--foreground': foreground
+  }">
     <div class="main-content">
       <div class="results">
         <h1>{{ contrast }}</h1>
@@ -114,13 +164,13 @@ updateMetaThemeColor();
   }
   
   #foreground-input {
-    --text-color: var(--background);
-    --border-color: var(--background);
+    --text-color: var(--foreground-text-color);
+    --border-color: var(--foreground-text-color);
   }
   
   #background-input {
-    --text-color: var(--foreground);
-    --border-color: var(--foreground);
+    --text-color: var(--background-text-color);
+    --border-color: var(--background-text-color);
   }
   
   .results {
@@ -170,19 +220,19 @@ updateMetaThemeColor();
   
   @media (any-hover: hover) {
     .foreground.color-row button:hover {
-      background: var(--foreground-tint);
+      background: var(--background-text-color-tint);
     }
     
     .background.color-row button:hover {
-      background: var(--background-tint);
+      background: var(--foreground-text-color-tint);
     }
     
     .foreground.color-row button:focus-visible {
-      background: var(--foreground-shade);
+      background: var(--background-text-color-shade);
     }
     
     .background.color-row button:focus-visible {
-      background: var(--background-shade);
+      background: var(--foreground-text-color-shade);
     }
   }
   
@@ -193,7 +243,7 @@ updateMetaThemeColor();
     flex: 1;
     
     background: var(--background);
-    color: var(--foreground);
+    color: var(--background-text-color);
     
     padding-top: env(safe-area-inset-top);
     padding-left: env(safe-area-inset-left);
@@ -209,7 +259,7 @@ updateMetaThemeColor();
     align-items: center;
     
     background: var(--foreground);
-    color: var(--background); 
+    color: var(--foreground-text-color); 
     
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
