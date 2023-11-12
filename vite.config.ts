@@ -18,8 +18,8 @@ export default defineConfig({
       injectRegister: 'auto',
       registerType: 'autoUpdate',
       manifest: {
-        background_color: '#0088cc',
-        theme_color: '#0088cc',
+        background_color: '#000000',
+        theme_color: '#000000',
         icons: [
           {
             src: 'pwa-64x64.png',
