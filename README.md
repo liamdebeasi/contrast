@@ -21,7 +21,7 @@ Contrast is available on the web: http://liamdebeasi.github.io/contrast/
 
 I recommend [installing Contrast as a Progressive Web App (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Installing#installing_pwas) for easier access. This will allow you to add a shortcut to your home screen or dock and run Contrast as a standalone application.
 
-Contrast can also be used offline and will automatically update when bug fixes and new features are available.
+Contrast will automatically update when bug fixes and new features are available and can also be used offline.
 
 ### Selecting Colors
 
