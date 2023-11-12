@@ -154,7 +154,7 @@ updateMetaThemeColor();
     
     text-transform: uppercase;
     font-family: inherit;
-    font-size: 1.5rem;
+    font-size: 1.875rem;
   
     display: flex;
     align-items: center;
@@ -186,9 +186,7 @@ updateMetaThemeColor();
     }
   }
   
-  .main-content {
-    width: 100%;
-    
+  .main-content {    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -198,11 +196,14 @@ updateMetaThemeColor();
     color: var(--foreground);
     
     padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    
+    font-size: 1.5rem;
   }
   
   .bottom-bar {
     min-height: 50px;
-    width: 100%;
     
     display: flex;
     align-items: center;
@@ -210,7 +211,9 @@ updateMetaThemeColor();
     background: var(--foreground);
     color: var(--background); 
     
-    padding-bottom: env(safe-area-inset-bottom);   
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
   
   .bottom-bar .color-row {
