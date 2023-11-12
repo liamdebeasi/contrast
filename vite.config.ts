@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/contrast/',
+  base: '/',
   plugins: [
     vue({
       template: {
@@ -18,6 +18,8 @@ export default defineConfig({
       injectRegister: 'auto',
       registerType: 'autoUpdate',
       manifest: {
+        background_color: '#0088cc',
+        theme_color: '#0088cc',
         icons: [
           {
             src: 'pwa-64x64.png',
