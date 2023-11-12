@@ -1,6 +1,10 @@
 name: Deploy application to GitHub Pages
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
