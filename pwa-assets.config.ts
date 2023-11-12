@@ -11,6 +11,9 @@ export default defineConfig({
     maskable: {
       sizes: [512],
       padding: 0,
+      resizeOptions: {
+        background: '#000000'
+      }
     },
     apple: {
       sizes: [180],
