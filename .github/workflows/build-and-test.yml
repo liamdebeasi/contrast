@@ -24,7 +24,7 @@ jobs:
         with:
           version: 8
       - name: Install Dependencies
-        run: pnpm install && pnpm playwright install --with-deps
+        run: pnpm install
         shell: sh
       - name: Build Application
         run: pnpm run build
