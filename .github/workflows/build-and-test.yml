@@ -1,0 +1,38 @@
+name: Build app and run tests
+
+on:
+  push:
+    branches:
+      - '*'
+
+concurrency:
+  # Cancel in progress runs for this branch
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: latest
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Install Dependencies
+        run: pnpm install && pnpm playwright install --with-deps
+        shell: sh
+      - name: Build Application
+        run: pnpm run build
+        shell: sh
+      - name: Run Tests
+        run: pnpm run test
+        shell: sh
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30

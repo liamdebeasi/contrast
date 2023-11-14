@@ -70,7 +70,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'pnpm run build && pnpm serve dist',
+    command: 'pnpm serve dist',
     url: 'http://127.0.0.1:3000',
     reuseExistingServer: !process.env.CI,
   },
