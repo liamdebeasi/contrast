@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - '*'
-  pull_request:
-    branches:
-      - '*'
 
 concurrency:
   # Cancel in progress runs for this branch
