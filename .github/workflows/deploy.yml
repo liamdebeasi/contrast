@@ -33,7 +33,7 @@ jobs:
         run: pnpm install
         shell: sh
       - name: Build Application
-        run: pnpm run build
+        run: BASE_PATH='/contrast/' pnpm run build
         shell: sh
       - name: Setup Pages
         uses: actions/configure-pages@v3
