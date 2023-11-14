@@ -30,7 +30,8 @@ jobs:
         run: pnpm run build
         shell: sh
       - name: Run Tests
-        run: pnpm run test
+        # https://github.com/microsoft/playwright/issues/6500
+        run: HOME=/root pnpm run test
         shell: sh
       - uses: actions/upload-artifact@v3
         if: always()
