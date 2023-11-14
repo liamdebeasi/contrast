@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="./assets/logo.png" width="125" />
+   <img src="./public/contrast-logo.svg" width="125" />
    <h1 align="center">
       Contrast
    </h1>
