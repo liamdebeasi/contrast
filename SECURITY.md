@@ -2,4 +2,4 @@
 
 ## Reporting a Vulnerability
 
-Please report any security vulnerabilities to ldebeasi@gmail.com.
+Please report any security vulnerabilities at https://github.com/liamdebeasi/contrast/security.
