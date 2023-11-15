@@ -9,7 +9,4 @@ import { checkmark, eyedrop, clipboard, colorPalette } from 'ionicons/icons';
 defineCustomElement();
 addIcons({ checkmark, eyedrop, clipboard, colorPalette });
 
-
-window.resizeTo(500, 375);
-
 createApp(App).mount('#app')
