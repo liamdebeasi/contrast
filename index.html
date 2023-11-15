@@ -14,6 +14,14 @@
   </head>
   <body>
     <div id="app"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", event => {
+        isBrowser = matchMedia("(display-mode: browser)").matches;
+        if (!isBrowser) {
+          window.resizeTo(500, 375);
+        }
+      });
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
