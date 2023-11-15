@@ -15,12 +15,26 @@
   <body>
     <div id="app"></div>
     <script>
-      document.addEventListener("DOMContentLoaded", event => {
-        isBrowser = matchMedia("(display-mode: browser)").matches;
-        if (!isBrowser) {
+      /**
+       * In some browsers display-mode: standalone
+       * does not match on DOMContentLoaded.
+       * If it does, then we can resize the window
+       * right away. Otherwise, we need to wait for
+       * the change event to fire for this media query.
+       */
+      const media = matchMedia("(display-mode: standalone)");
+
+      const resizeWindow = (ev) => {
+        if (ev === undefined || ev.matches) {
           window.resizeTo(500, 375);
+          media.removeEventListener('change', resizeWindow);
         }
-      });
+      }
+      if (media.matches) {
+        resizeWindow();
+      } else {
+        media.addEventListener('change', resizeWindow);
+      }
     </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
