@@ -6,6 +6,7 @@ import DropperButton from './components/DropperButton.vue';
 import CopyButton from './components/CopyButton.vue';
 import PaletteButton from './components/PaletteButton.vue';
 import ColorInput from './components/ColorInput.vue';
+import ModeButton from './components/ModeButton.vue';
 
 const getContrast = () => {
   const foregroundRGB = ColorContrastCalc.colorFrom(foreground.value);
@@ -23,8 +24,14 @@ const getContrast = () => {
   return ratio.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
 }
 
+const getDeveloperMode = () => {
+  const res = localStorage.getItem('developermode');
+  return res === 'true';
+}
+
 const foreground = ref('#f5e8c8');
 const background = ref('#4c3163');
+const developerMode = ref(getDeveloperMode());
 
 /**
  * These refs allow us to change the text colors
@@ -49,6 +56,21 @@ const computePass = ([aaThreshold, aaaThreshold]: [number, number | undefined]) 
     return 'AA';
   } else {
     return 'Fail';
+  }
+}
+
+/**
+ * Used for basic mode to give a general
+ * idea of how "good" two colors are
+ * with relation to contrast color.
+ */
+const computeRating = () => {
+  if (contrast.value >= 7) {
+    return 'GREAT';
+  } else if (contrast.value >= 4.5) {
+    return 'PASS';
+  } else {
+    return 'FAIL';
   }
 }
 
@@ -111,12 +133,22 @@ updateMetaThemeColor();
     '--foreground': foreground
   }">
     <div class="main-content">
-      <div class="results">
-        <h1>{{ contrast }}</h1>
+      <div class="results">        
+        <span v-if="developerMode === true">
+          <h1>{{ contrast }}</h1>
+  
+          <div>Small: <strong>{{ computePass([4.5, 7])}}</strong></div>
+          <div>Large: <strong>{{ computePass([3, 4.5])}}</strong></div>
+          <div>UI: <strong>{{ computePass([3, undefined])}}</strong></div>
+        </span>
+        
+        <span v-if="developerMode === false">
+          <h1>{{ computeRating() }}</h1>
+          <h2>{{ contrast }}</h2>
+        </span>
+        
+        <ModeButton v-model="developerMode" :hint="developerMode === false ? 'Enter developer mode' : 'Exit developer mode'" />
 
-        <div>Small: <strong>{{ computePass([4.5, 7])}}</strong></div>
-        <div>Large: <strong>{{ computePass([3, 4.5])}}</strong></div>
-        <div>UI: <strong>{{ computePass([3, undefined])}}</strong></div>
       </div>
       <div class="foreground color-row">
         <div class="button-group">
@@ -147,6 +179,10 @@ updateMetaThemeColor();
 <style>
   h1 {
     margin: 0px 0px 16px 0px;
+  }
+  
+  h2 {
+    margin: 0;
   }
 
   main {   
@@ -219,7 +255,8 @@ updateMetaThemeColor();
   }
   
   @media (any-hover: hover) {
-    .foreground.color-row button:hover {
+    .foreground.color-row button:hover,
+    .results button:hover {
       background: var(--background-text-color-tint);
     }
     
@@ -227,7 +264,8 @@ updateMetaThemeColor();
       background: var(--foreground-text-color-tint);
     }
     
-    .foreground.color-row button:focus-visible {
+    .foreground.color-row button:focus-visible,
+    .results button:focus-visible {
       background: var(--background-text-color-shade);
     }
     

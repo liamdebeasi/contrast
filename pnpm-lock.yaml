@@ -34,6 +34,9 @@ devDependencies:
   generator:
     specifier: link:@vite-pwa@assets/generator
     version: link:@vite-pwa@assets/generator
+  pnpm:
+    specifier: ^8.15.1
+    version: 8.15.1
   serve:
     specifier: ^14.2.1
     version: 14.2.1
@@ -3195,6 +3198,12 @@ packages:
       playwright-core: 1.39.0
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /pnpm@8.15.1:
+    resolution: {integrity: sha512-gxz0xfi4N0r3FSHU0VPbSdcIbeYVwq98tenX64umMN2sRv6kldZD5VLvLmijqpmj5en77oaWcClnUE31xZyycw==}
+    engines: {node: '>=16.14'}
+    hasBin: true
     dev: true
 
   /postcss@8.4.31:
