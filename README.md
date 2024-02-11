@@ -23,6 +23,12 @@ I recommend [installing Contrast as a Progressive Web App (PWA)](https://develop
 
 Contrast will automatically update when bug fixes and new features are available and can also be used offline.
 
+### Modes
+
+Contrast starts in "Basic Mode" by default. This shows the color contrast ratio and a rating of "Fail", "Pass", or "Great" based on the color contrast value. "Developer Mode" can be enabled by clicking the hammer icon and provides results based on each content type: Small text, large text, and UI components.
+
+"Basic Mode" is ideal for those who quickly need to understand if their colors have sufficient contrast, while "Developer Mode" is ideal for those who need their contrast results tailored to specific content types.
+
 ### Selecting Colors
 
 **Eye Dropper**
