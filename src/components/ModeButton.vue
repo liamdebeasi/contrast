@@ -6,7 +6,7 @@
   const toggleMode = () => {
     const newValue = !props.modelValue
     emit('update:modelValue', newValue);
-    localStorage.setItem('developermode', state.toString());
+    localStorage.setItem('developermode', newValue.toString());
   }  
 </script>
 
