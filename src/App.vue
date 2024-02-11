@@ -59,6 +59,11 @@ const computePass = ([aaThreshold, aaaThreshold]: [number, number | undefined]) 
   }
 }
 
+/**
+ * Used for basic mode to give a general
+ * idea of how "good" two colors are
+ * with relation to contrast color.
+ */
 const computeRating = () => {
   if (contrast.value >= 7) {
     return 'GREAT';
