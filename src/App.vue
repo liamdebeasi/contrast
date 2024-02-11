@@ -24,9 +24,14 @@ const getContrast = () => {
   return ratio.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
 }
 
+const getDeveloperMode = () => {
+  const res = localStorage.getItem('developermode');
+  return res === 'true';
+}
+
 const foreground = ref('#f5e8c8');
 const background = ref('#4c3163');
-const developerMode = ref(false);
+const developerMode = ref(getDeveloperMode());
 
 /**
  * These refs allow us to change the text colors
@@ -169,6 +174,10 @@ updateMetaThemeColor();
 <style>
   h1 {
     margin: 0px 0px 16px 0px;
+  }
+  
+  h2 {
+    margin: 0;
   }
 
   main {   

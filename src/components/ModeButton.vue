@@ -2,11 +2,12 @@
   import { hammer, hammerOutline } from 'ionicons/icons';
   const props = defineProps(['modelValue', 'hint']);
   const emit = defineEmits(['update:modelValue']);
-  console.log(props.modelValue)
-  
+
   const toggleMode = () => {
-    emit('update:modelValue', !props.modelValue);
-  }
+    const newValue = !props.modelValue
+    emit('update:modelValue', newValue);
+    localStorage.setItem('developermode', state.toString());
+  }  
 </script>
 
 <template>
