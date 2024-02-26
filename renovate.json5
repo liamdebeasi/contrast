@@ -4,4 +4,32 @@
   dependencyDashboard: false,
   minimumReleaseAge: '3 days',
   semanticCommits: 'enabled',
+  packageRules: [
+    {
+      $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+      extends: ['config:base', ':semanticCommitTypeAll(chore)'],
+      dependencyDashboard: false,
+      minimumReleaseAge: '3 days',
+      semanticCommits: 'enabled',
+      packageRules: [
+        {
+          matchDatasources: ["npm"],
+          matchPackagePatterns: ["@playwright/test", "@axe-core/playwright"],
+          groupName: "playwright",
+          matchFileNames: [
+            "package.json"
+          ]
+        },
+        {
+          matchDatasources: ["docker"],
+          matchPackageNames: ["mcr.microsoft.com/playwright"],
+          groupName: "playwright",
+          matchFileNames: [
+            "Dockerfile"
+          ],
+          versioning: "semver"
+        },
+      ]
+    }
+  ]
 }
