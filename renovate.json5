@@ -6,37 +6,36 @@
   semanticCommits: 'enabled',
   packageRules: [
     {
-      $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-      extends: ['config:base', ':semanticCommitTypeAll(chore)'],
-      dependencyDashboard: false,
-      minimumReleaseAge: '3 days',
-      semanticCommits: 'enabled',
-      packageRules: [
-        {
-          /**
-           * The GitHub Pages actions tend to depend on one another, so update them at the same time.
-           */
-          matchPackageNames: ['actions/upload-artifact', 'actions/upload-pages-artifact', 'actions/deploy-pages'],
-          groupName: 'artifact-and-pages',
-        },
-        {
-          matchDatasources: ['npm'],
-          matchPackageNames: ['@playwright/test', '@axe-core/playwright'],
-          groupName: 'playwright',
-          matchFileNames: [
-            'package.json'
-          ]
-        },
-        {
-          matchDatasources: ['docker'],
-          matchPackageNames: ['mcr.microsoft.com/playwright'],
-          groupName: 'playwright',
-          matchFileNames: [
-            'Dockerfile'
-          ],
-          versioning: 'semver'
-        },
+      matchPackageNames: ['vue', 'vue-tsc'],
+      groupName: 'vue'
+    },
+    {
+      matchPackageNames: ['@vite-pwa/assets-generator', '@vitejs/plugin-vue', 'vite', 'vite-plugin-pwa'],
+      groupName: 'vite' 
+    },
+    {
+      /**
+       * The GitHub Pages actions tend to depend on one another, so update them at the same time.
+       */
+      matchPackageNames: ['actions/upload-artifact', 'actions/upload-pages-artifact', 'actions/deploy-pages'],
+      groupName: 'artifact-and-pages',
+    },
+    {
+      matchDatasources: ['npm'],
+      matchPackageNames: ['@playwright/test', '@axe-core/playwright'],
+      groupName: 'playwright',
+      matchFileNames: [
+        'package.json'
       ]
-    }
+    },
+    {
+      matchDatasources: ['docker'],
+      matchPackageNames: ['mcr.microsoft.com/playwright'],
+      groupName: 'playwright',
+      matchFileNames: [
+        'Dockerfile'
+      ],
+      versioning: 'semver'
+    },
   ]
 }
