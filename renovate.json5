@@ -14,7 +14,7 @@
       packageRules: [
         {
           matchDatasources: ["npm"],
-          matchPackagePatterns: ["@playwright/test", "@axe-core/playwright"],
+          matchPackageNames: ["@playwright/test", "@axe-core/playwright"],
           groupName: "playwright",
           matchFileNames: [
             "package.json"
