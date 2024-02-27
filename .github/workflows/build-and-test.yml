@@ -28,7 +28,7 @@ jobs:
         run: pnpm run build
         shell: sh
       - name: Run Tests
-        run: pnpm run test.docker
+        run: pnpm run test.docker.ci
         shell: sh
       - uses: actions/upload-artifact@v3
         if: always()
