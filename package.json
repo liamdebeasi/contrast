@@ -24,7 +24,6 @@
     "@vite-pwa/assets-generator": "^0.0.10",
     "@vitejs/plugin-vue": "^4.2.3",
     "generator": "link:@vite-pwa@assets/generator",
-    "pnpm": "^8.15.1",
     "serve": "^14.2.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
