@@ -13,21 +13,28 @@
       semanticCommits: 'enabled',
       packageRules: [
         {
-          matchDatasources: ["npm"],
-          matchPackageNames: ["@playwright/test", "@axe-core/playwright"],
-          groupName: "playwright",
+          /**
+           * The GitHub Pages actions tend to depend on one another, so update them at the same time.
+           */
+          matchPackageNames: ['actions/upload-artifact', 'actions/upload-pages-artifact', 'actions/deploy-pages'],
+          groupName: 'artifact-and-pages',
+        },
+        {
+          matchDatasources: ['npm'],
+          matchPackageNames: ['@playwright/test', '@axe-core/playwright'],
+          groupName: 'playwright',
           matchFileNames: [
-            "package.json"
+            'package.json'
           ]
         },
         {
-          matchDatasources: ["docker"],
-          matchPackageNames: ["mcr.microsoft.com/playwright"],
-          groupName: "playwright",
+          matchDatasources: ['docker'],
+          matchPackageNames: ['mcr.microsoft.com/playwright'],
+          groupName: 'playwright',
           matchFileNames: [
-            "Dockerfile"
+            'Dockerfile'
           ],
-          versioning: "semver"
+          versioning: 'semver'
         },
       ]
     }
