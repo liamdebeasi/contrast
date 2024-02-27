@@ -21,14 +21,14 @@
     "@axe-core/playwright": "^4.8.1",
     "@playwright/test": "^1.39.0",
     "@types/node": "^20.9.0",
-    "@vite-pwa/assets-generator": "^0.0.10",
+    "@vite-pwa/assets-generator": "^0.2.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "generator": "link:@vite-pwa@assets/generator",
     "pnpm": "^8.15.1",
     "serve": "^14.2.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
-    "vite-plugin-pwa": "^0.16.7",
+    "vite-plugin-pwa": "^0.19.0",
     "vue-tsc": "^1.8.5"
   }
 }
