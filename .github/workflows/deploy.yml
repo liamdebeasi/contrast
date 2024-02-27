@@ -38,9 +38,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: containerbase/internal-tools@v3
         with:
           path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: containerbase/internal-tools@v4
