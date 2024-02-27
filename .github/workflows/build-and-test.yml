@@ -13,8 +13,6 @@ concurrency:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.39.0-jammy
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
@@ -30,8 +28,7 @@ jobs:
         run: pnpm run build
         shell: sh
       - name: Run Tests
-        # https://github.com/microsoft/playwright/issues/6500
-        run: HOME=/root pnpm run test
+        run: pnpm run test.docker
         shell: sh
       - uses: actions/upload-artifact@v3
         if: always()
