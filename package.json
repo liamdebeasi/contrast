@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test": "playwright test",
     "generate-assets": "pwa-assets-generator",
-    "test.docker": "docker build -t contrast-playwright . && docker run -it --rm --ipc=host --mount=type=bind,source=./,target=/contrast contrast-playwright pnpm run test --"
+    "test.docker": "docker build -t contrast-playwright . && docker run -it --rm --ipc=host --mount=type=bind,source=./,target=/contrast contrast-playwright pnpm run test",
+    "test.docker.ci": "docker build -t contrast-playwright . && docker run --rm --ipc=host --mount=type=bind,source=./,target=/contrast contrast-playwright pnpm run test"
   },
   "dependencies": {
     "color-contrast-calc": "^0.4.1",
