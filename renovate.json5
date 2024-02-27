@@ -13,6 +13,13 @@
       semanticCommits: 'enabled',
       packageRules: [
         {
+          /**
+           * The GitHub Pages actions tend to depend on one another, so update them at the same time.
+           */
+          matchPackageName: ['actions/upload-artifact', 'actions/upload-pages-artifact', 'actions/deploy-pages'],
+          groupName: 'artifact-and-pages',
+        },
+        {
           matchDatasources: ["npm"],
           matchPackageNames: ["@playwright/test", "@axe-core/playwright"],
           groupName: "playwright",
