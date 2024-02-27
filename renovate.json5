@@ -16,7 +16,7 @@
           /**
            * The GitHub Pages actions tend to depend on one another, so update them at the same time.
            */
-          matchPackageName: ['actions/upload-artifact', 'actions/upload-pages-artifact', 'actions/deploy-pages'],
+          matchPackageNames: ['actions/upload-artifact', 'actions/upload-pages-artifact', 'actions/deploy-pages'],
           groupName: 'artifact-and-pages',
         },
         {
