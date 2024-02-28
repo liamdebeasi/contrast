@@ -10,7 +10,7 @@ dependencies:
     version: 0.4.1
   ionicons:
     specifier: ^7.2.1
-    version: 7.2.1
+    version: 7.2.2
   vue:
     specifier: ^3.3.4
     version: 3.3.8(typescript@5.3.3)
@@ -1589,8 +1589,8 @@ packages:
       rollup: 2.79.1
     dev: true
 
-  /@stencil/core@4.7.1:
-    resolution: {integrity: sha512-KDWA/3qDiABA5LqtHCmTVwORuzgu/YdC0FpSBwVmwlw6K8jUjbTA5JB6Q03da2F+EQlDHOVgbW0TNtHCm54uXQ==}
+  /@stencil/core@4.12.4:
+    resolution: {integrity: sha512-KrwoXu9J1loWSvQQReilGPkt6/dCH/x5eTBDecCBPclz7vxUM13Iw9almBIffEpurk/kaMAglH0G7sAF/A2y1A==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
     dev: false
@@ -2748,10 +2748,10 @@ packages:
       side-channel: 1.0.5
     dev: true
 
-  /ionicons@7.2.1:
-    resolution: {integrity: sha512-2pvCM7DGVEtbbj48PJzQrCADCQrqjU1nUYX9l9PyEWz3ZfdnLdAouqwPxLdl8tbaF9cE7OZRSlyQD7oLOLnGoQ==}
+  /ionicons@7.2.2:
+    resolution: {integrity: sha512-I3iYIfc9Q9FRifWyFSwTAvbEABWlWY32i0sAVDDPGYnaIZVugkLCZFbEcrphW6ixVPg8tt1oLwalo/JJwbEqnA==}
     dependencies:
-      '@stencil/core': 4.7.1
+      '@stencil/core': 4.12.4
     dev: false
 
   /is-array-buffer@3.0.4:
