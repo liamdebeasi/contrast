@@ -10,7 +10,7 @@ dependencies:
     version: 0.4.1
   ionicons:
     specifier: ^7.2.1
-    version: 7.3.0
+    version: 7.3.1
   vue:
     specifier: ^3.3.4
     version: 3.4.21(typescript@5.4.4)
@@ -1700,8 +1700,8 @@ packages:
     dev: true
     optional: true
 
-  /@stencil/core@4.13.0:
-    resolution: {integrity: sha512-gg+gtBWekQ08mDja8GVAUHNu+rrFhQaKZDvfhnS3l/5JbYiJddTimuDPPhuc0sR0JZL1iRdJTJSa+JbvmnQ1cQ==}
+  /@stencil/core@4.15.0:
+    resolution: {integrity: sha512-C5syM3chCyxX0Os5M+ZWrBujjqwUfrTb87YiLr8RC+kMTmIpnRvvtj8/s3QYDGdDENGRxGkBpeboVh82IGqk0w==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
     dev: false
@@ -1729,8 +1729,8 @@ packages:
       undici-types: 5.26.5
     dev: true
 
-  /@types/node@20.12.5:
-    resolution: {integrity: sha512-BD+BjQ9LS/D8ST9p5uqBxghlN+S42iuNxjsUGjeZobe/ciXzk2qb1B6IXc6AnRLS+yFJRpN2IPEHMzwspfDJNw==}
+  /@types/node@20.12.7:
+    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1738,7 +1738,7 @@ packages:
   /@types/resolve@1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 20.12.5
+      '@types/node': 20.12.7
     dev: true
 
   /@types/trusted-types@2.0.7:
@@ -2087,8 +2087,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001606
-      electron-to-chromium: 1.4.729
+      caniuse-lite: 1.0.30001607
+      electron-to-chromium: 1.4.731
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -2135,8 +2135,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /caniuse-lite@1.0.30001606:
-    resolution: {integrity: sha512-LPbwnW4vfpJId225pwjZJOgX1m9sGfbw/RKJvw/t0QhYOOaTXHvkjVGFGPpvwEzufrjvTlsULnVTxdy4/6cqkg==}
+  /caniuse-lite@1.0.30001607:
+    resolution: {integrity: sha512-WcvhVRjXLKFB/kmOFVwELtMxyhq3iM/MvmXcyCe2PNf166c39mptscOc/45TTS96n2gpNV2z7+NakArTWZCQ3w==}
     dev: true
 
   /chalk-template@0.4.0:
@@ -2433,8 +2433,8 @@ packages:
       jake: 10.8.7
     dev: true
 
-  /electron-to-chromium@1.4.729:
-    resolution: {integrity: sha512-bx7+5Saea/qu14kmPTDHQxkp2UnziG3iajUQu3BxFvCOnpAJdDbMV4rSl+EqFDkkpNNVUFlR1kDfpL59xfy1HA==}
+  /electron-to-chromium@1.4.731:
+    resolution: {integrity: sha512-+TqVfZjpRz2V/5SPpmJxq9qK620SC5SqCnxQIOi7i/U08ZDcTpKbT7Xjj9FU5CbXTMUb4fywbIr8C7cGv4hcjw==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -2891,10 +2891,10 @@ packages:
       side-channel: 1.0.6
     dev: true
 
-  /ionicons@7.3.0:
-    resolution: {integrity: sha512-l9quySYi+o4T6mFzhKRyU/1nKc2Zs0zxs7jWcq9iVRhRPQondV11jYqLTed0lVVXHfGrBCfnedKl9D6BCnA1UQ==}
+  /ionicons@7.3.1:
+    resolution: {integrity: sha512-1boG4EQTBBpQ4/0PU60Yi78Iw/k8iNtKu9c0NmsbzHGnWAcwpiovG9Wi/rk5UlF+DC+CR4XDCxKo91YqvAxkww==}
     dependencies:
-      '@stencil/core': 4.13.0
+      '@stencil/core': 4.15.0
     dev: false
 
   /is-array-buffer@3.0.4:
@@ -3084,7 +3084,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.12.5
+      '@types/node': 20.12.7
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: true
