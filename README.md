@@ -45,7 +45,7 @@ The color palette tool can be used to bring up the browser's native color picker
 
 ### Modifying Colors
 
-Contrast can help suggest more accessible colors using the "Auto Adjust" tool. Clicking the magic wand icon will adjust the background color if necessary to bring the color contrast ratio up to at least 4.5:1 (AA).
+Contrast can help suggest more accessible colors using the "Auto Adjust" tool. Clicking the wand icon will adjust the background color if necessary to bring the color contrast ratio up to at least 4.5:1 (AA).
 
 ### Copying Colors
 
