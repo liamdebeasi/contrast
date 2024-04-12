@@ -1,6 +1,6 @@
 <script setup lang="ts">  
   import { colorWand, checkmark } from 'ionicons/icons';
-  import { computeContrast } from '../utils';
+  import { computeContrast, computeFallbackColors } from '../utils';
   import { ColorContrastCalc } from 'color-contrast-calc';
   import { ref } from 'vue';
 
@@ -16,7 +16,18 @@
       const foregroundColor = ColorContrastCalc.colorFrom(props.foreground);
       const backgroundColor = ColorContrastCalc.colorFrom(props.modelValue);
       
-      const adjustedBackgroundColor = foregroundColor.findBrightnessThreshold(backgroundColor, 'AA');
+      let adjustedBackgroundColor = foregroundColor.findBrightnessThreshold(backgroundColor, 'AA');
+      
+      /**
+       * Sometimes findBrightnessThreshold can't find a color with sufficient contrast.
+       * When that happens use either #000 or #fff, whichever has the higher contrast.
+       */
+      const computeContrastAgain = computeContrast(props.foreground, adjustedBackgroundColor.hexCode);
+      if (computeContrastAgain < 4.5) {
+        const fallbackColor = computeFallbackColors(props.modelValue);
+        adjustedBackgroundColor = ColorContrastCalc.colorFrom(fallbackColor);
+      }
+
       emit('update:modelValue', adjustedBackgroundColor.hexCode);
     }
     
