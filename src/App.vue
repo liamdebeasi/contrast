@@ -7,6 +7,7 @@ import CopyButton from './components/CopyButton.vue';
 import PaletteButton from './components/PaletteButton.vue';
 import ColorInput from './components/ColorInput.vue';
 import ModeButton from './components/ModeButton.vue';
+import AdjustButton from './components/AdjustButton.vue';
 
 const getContrast = () => {
   const foregroundRGB = ColorContrastCalc.colorFrom(foreground.value);
@@ -147,7 +148,10 @@ updateMetaThemeColor();
           <h2>{{ contrast }}</h2>
         </span>
         
-        <ModeButton v-model="developerMode" :hint="developerMode === false ? 'Enter developer mode' : 'Exit developer mode'" />
+        <div class="button-column">
+          <ModeButton v-model="developerMode" :hint="developerMode === false ? 'Enter developer mode' : 'Exit developer mode'" />
+          <AdjustButton v-model="background" hint="Adjust background color to meet AA color contrast level" />
+        </div>
 
       </div>
       <div class="foreground color-row">
@@ -306,5 +310,15 @@ updateMetaThemeColor();
   
   .bottom-bar .color-row {
     width: 100%; /* hack */
+  }
+  
+  .button-column {
+    display: flex;
+    flex-direction: column;
+    
+    position: absolute;
+    
+    inset-inline-end: 0;
+    top: 8px;
   }
 </style>
