@@ -1,6 +1,7 @@
 <script setup lang="ts">  
   import { colorWand, checkmark } from 'ionicons/icons';
   import { computeContrast } from '../utils';
+  import { ColorContrastCalc } from 'color-contrast-calc';
   import { ref } from 'vue';
 
   const props = defineProps(['modelValue', 'foreground', 'hint']);
@@ -12,7 +13,11 @@
     const contrast = computeContrast(props.foreground, props.modelValue);
     
     if (contrast < 4.5) {
-      emit('update:modelValue', '#0088cc');
+      const foregroundColor = ColorContrastCalc.colorFrom(props.foreground);
+      const backgroundColor = ColorContrastCalc.colorFrom(props.modelValue);
+      
+      const adjustedBackgroundColor = foregroundColor.findBrightnessThreshold(backgroundColor, 'AA');
+      emit('update:modelValue', adjustedBackgroundColor.hexCode);
     }
     
     showAdjustButton.value = false;
