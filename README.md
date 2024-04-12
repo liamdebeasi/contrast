@@ -43,6 +43,10 @@ The selected foreground and background colors are displayed in their respective 
 
 The color palette tool can be used to bring up the browser's native color picker for more advanced color selection.
 
+### Modifying Colors
+
+Contrast can help suggest more accessible colors using the "Auto Adjust" tool. Clicking the wand icon will adjust the background color if necessary to bring the color contrast ratio up to at least 4.5:1 (AA).
+
 ### Copying Colors
 
 The clipboard icon can be used to copy the foreground or background color to your clipboard for usage outside of the app.

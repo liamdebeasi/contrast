@@ -17,12 +17,3 @@
     </button>
   </div>
 </template>
-
-<style scoped>
-  .button-wrapper {
-    position: absolute;
-    
-    inset-inline-end: 0;
-    top: 8px;
-  }
-</style>
