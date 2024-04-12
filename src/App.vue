@@ -2,28 +2,14 @@
 import { ref, watch } from 'vue';
 import { ColorContrastCalc } from 'color-contrast-calc';
 
+import { computeContrast } from './utils';
+
 import DropperButton from './components/DropperButton.vue';
 import CopyButton from './components/CopyButton.vue';
 import PaletteButton from './components/PaletteButton.vue';
 import ColorInput from './components/ColorInput.vue';
 import ModeButton from './components/ModeButton.vue';
 import AdjustButton from './components/AdjustButton.vue';
-
-const getContrast = () => {
-  const foregroundRGB = ColorContrastCalc.colorFrom(foreground.value);
-  const backgroundRGB = ColorContrastCalc.colorFrom(background.value);
-  
-  const ratio = foregroundRGB.contrastRatioAgainst(backgroundRGB);
-  
-  /**
-   * Ratio should have at most
-   * two decimal places. Note that we
-   * do not round here because a
-   * ratio of 4.995 should not be
-   * founded up to 4.5.
-   */
-  return ratio.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
-}
 
 const getDeveloperMode = () => {
   const res = localStorage.getItem('developermode');
@@ -43,7 +29,7 @@ const developerMode = ref(getDeveloperMode());
 const foregroundTextColor = ref(background.value);
 const backgroundTextColor = ref(foreground.value);
 
-const contrast = ref(getContrast())
+const contrast = ref(computeContrast(foreground.value, background.value))
 const metaThemeColor = document.querySelector('meta[name=theme-color]') as HTMLMetaElement;
 
 const updateMetaThemeColor = () => {
@@ -84,7 +70,7 @@ const computeRating = () => {
  */
 watch([foreground, background], () => {
   updateMetaThemeColor();
-  const ratio = contrast.value = getContrast();
+  const ratio = contrast.value = computeContrast(foreground.value, background.value);
   
   /**
    * Typically the textColor refs are the
@@ -150,7 +136,7 @@ updateMetaThemeColor();
         
         <div class="button-column">
           <ModeButton v-model="developerMode" :hint="developerMode === false ? 'Enter developer mode' : 'Exit developer mode'" />
-          <AdjustButton v-model="background" hint="Adjust background color to meet AA color contrast level" />
+          <AdjustButton v-model="background" :foreground="foreground" hint="Adjust background color to meet AA color contrast level" />
         </div>
 
       </div>

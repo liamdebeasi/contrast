@@ -1,6 +1,6 @@
 <script setup lang="ts">  
   import { colorWand } from 'ionicons/icons';
-  const props = defineProps(['modelValue', 'hint']);
+  const props = defineProps(['modelValue', 'foreground', 'hint']);
   const emit = defineEmits(['update:modelValue']);
 
   const adjustColor = () => {
