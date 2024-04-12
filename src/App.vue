@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import { ColorContrastCalc } from 'color-contrast-calc';
 
 import { computeContrast, computeFallbackColors } from './utils';
 
