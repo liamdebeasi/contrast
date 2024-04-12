@@ -12,3 +12,22 @@ export const computeContrast = (foreground: string, background: string) => {
    */
   return ratio.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
 }
+
+export const computeFallbackColors = (background: string) => {
+  /**
+   * Compare white text and black text contrast on chosen
+   * background and use whichever one has the higher ratio.
+   */
+  const whiteForegroundRGB = ColorContrastCalc.colorFrom('#ffffff');
+  const blackForegroundRGB = ColorContrastCalc.colorFrom('#000000');
+  const backgroundRGB = ColorContrastCalc.colorFrom(background);
+  
+  const whiteRatio = whiteForegroundRGB.contrastRatioAgainst(backgroundRGB);
+  const blackRatio = blackForegroundRGB.contrastRatioAgainst(backgroundRGB);
+  
+  if (whiteRatio >= blackRatio) {
+    return '#ffffff';
+  } else {
+    return '#000000';
+  }
+}

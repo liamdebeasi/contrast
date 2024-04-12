@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import { ColorContrastCalc } from 'color-contrast-calc';
 
-import { computeContrast } from './utils';
+import { computeContrast, computeFallbackColors } from './utils';
 
 import DropperButton from './components/DropperButton.vue';
 import CopyButton from './components/CopyButton.vue';
@@ -86,18 +85,7 @@ watch([foreground, background], () => {
      * Compare white text and black text contrast on chosen
      * background and use whichever one has the higher ratio.
      */
-    const whiteForegroundRGB = ColorContrastCalc.colorFrom('#ffffff');
-    const blackForegroundRGB = ColorContrastCalc.colorFrom('#000000');
-    const backgroundRGB = ColorContrastCalc.colorFrom(background.value);
-    
-    const whiteRatio = whiteForegroundRGB.contrastRatioAgainst(backgroundRGB);
-    const blackRatio = blackForegroundRGB.contrastRatioAgainst(backgroundRGB);
-    
-    if (whiteRatio >= blackRatio) {
-      foregroundTextColor.value = backgroundTextColor.value = '#ffffff';
-    } else {
-      foregroundTextColor.value = backgroundTextColor.value = '#000000';
-    }
+    foregroundTextColor.value = backgroundTextColor.value = computeFallbackColors(background.value);
   } else {
     foregroundTextColor.value = background.value;
     backgroundTextColor.value = foreground.value;
