@@ -18,13 +18,13 @@ dependencies:
 devDependencies:
   '@axe-core/playwright':
     specifier: ^4.8.1
-    version: 4.9.0(playwright-core@1.43.0)
+    version: 4.9.0(playwright-core@1.43.1)
   '@playwright/test':
     specifier: ^1.39.0
     version: 1.43.0
   '@types/node':
     specifier: ^20.9.0
-    version: 20.12.6
+    version: 20.12.7
   '@vite-pwa/assets-generator':
     specifier: ^0.2.0
     version: 0.2.4
@@ -42,7 +42,7 @@ devDependencies:
     version: 5.4.4
   vite:
     specifier: ^5.0.0
-    version: 5.2.8(@types/node@20.12.6)
+    version: 5.2.8(@types/node@20.12.7)
   vite-plugin-pwa:
     specifier: ^0.19.0
     version: 0.19.8(@vite-pwa/assets-generator@0.2.4)(vite@5.2.8)(workbox-build@7.0.0)(workbox-window@7.0.0)
@@ -76,13 +76,13 @@ packages:
       leven: 3.1.0
     dev: true
 
-  /@axe-core/playwright@4.9.0(playwright-core@1.43.0):
+  /@axe-core/playwright@4.9.0(playwright-core@1.43.1):
     resolution: {integrity: sha512-Q1Lz75dNsX38jof+aev7RficDMdH/HLOLySkDdXR0fUoeFcLdw4UNgDO2CNNP4CTpoesEdfYRdd6VmDXjhBgbA==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
       axe-core: 4.9.0
-      playwright-core: 1.43.0
+      playwright-core: 1.43.1
     dev: true
 
   /@babel/code-frame@7.24.2:
@@ -1725,7 +1725,7 @@ packages:
   /@surma/rollup-plugin-off-main-thread@2.2.3:
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
     dependencies:
-      ejs: 3.1.9
+      ejs: 3.1.10
       json5: 2.2.3
       magic-string: 0.25.9
       string.prototype.matchall: 4.0.11
@@ -1737,12 +1737,6 @@ packages:
 
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
-    dev: true
-
-  /@types/node@20.12.6:
-    resolution: {integrity: sha512-3KurE8taB8GCvZBPngVbp0lk5CKi8M9f9k1rsADh0Evdz5SzJ+Q+Hx9uHoFGsLnLnd1xmkDQr2hVhlA0Mn0lKQ==}
-    dependencies:
-      undici-types: 5.26.5
     dev: true
 
   /@types/node@20.12.7:
@@ -1781,7 +1775,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.2.8(@types/node@20.12.6)
+      vite: 5.2.8(@types/node@20.12.7)
       vue: 3.4.21(typescript@5.4.4)
     dev: true
 
@@ -2103,8 +2097,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001608
-      electron-to-chromium: 1.4.735
+      caniuse-lite: 1.0.30001609
+      electron-to-chromium: 1.4.736
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -2151,8 +2145,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /caniuse-lite@1.0.30001608:
-    resolution: {integrity: sha512-cjUJTQkk9fQlJR2s4HMuPMvTiRggl0rAVMtthQuyOlDWuqHXqN8azLq+pi8B2TjwKJ32diHjUqRIKeFX4z1FoA==}
+  /caniuse-lite@1.0.30001609:
+    resolution: {integrity: sha512-JFPQs34lHKx1B5t1EpQpWH4c+29zIyn/haGsbpfq3suuV9v56enjFt23zqijxGTMwy1p/4H2tjnQMY+p1WoAyA==}
     dev: true
 
   /chalk-template@0.4.0:
@@ -2441,16 +2435,16 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /ejs@3.1.9:
-    resolution: {integrity: sha512-rC+QVNMJWv+MtPgkt0y+0rVEIdbtxVADApW9JXrUVlzHetgcyczP/E7DJmWJ4fJCZF2cPcBk0laWO9ZHMG3DmQ==}
+  /ejs@3.1.10:
+    resolution: {integrity: sha512-UeJmFfOrAQS8OJWPZ4qtgHyWExa088/MtK5UEyoJGFH67cDEXkZSviOiKRCZ4Xij0zxI3JECgYs3oKx+AizQBA==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     dependencies:
       jake: 10.8.7
     dev: true
 
-  /electron-to-chromium@1.4.735:
-    resolution: {integrity: sha512-pkYpvwg8VyOTQAeBqZ7jsmpCjko1Qc6We1ZtZCjRyYbT5v4AIUKDy5cQTRotQlSSZmMr8jqpEt6JtOj5k7lR7A==}
+  /electron-to-chromium@1.4.736:
+    resolution: {integrity: sha512-Rer6wc3ynLelKNM4lOCg7/zPQj8tPOCB2hzD32PX9wd3hgRRi9MxEbmkFCokzcEhRVMiOVLjnL9ig9cefJ+6+Q==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -3423,6 +3417,12 @@ packages:
     hasBin: true
     dev: true
 
+  /playwright-core@1.43.1:
+    resolution: {integrity: sha512-EI36Mto2Vrx6VF7rm708qSnesVQKbxEWvPrfA1IPY6HgczBplDx7ENtx+K2n4kJ41sLLkuGfmb0ZLSSXlDhqPg==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dev: true
+
   /playwright@1.43.0:
     resolution: {integrity: sha512-SiOKHbVjTSf6wHuGCbqrEyzlm6qvXcv7mENP+OZon1I07brfZLGdfWV0l/efAzVx7TF3Z45ov1gPEkku9q25YQ==}
     engines: {node: '>=16'}
@@ -4256,14 +4256,14 @@ packages:
       debug: 4.3.4
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 5.2.8(@types/node@20.12.6)
+      vite: 5.2.8(@types/node@20.12.7)
       workbox-build: 7.0.0
       workbox-window: 7.0.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@5.2.8(@types/node@20.12.6):
+  /vite@5.2.8(@types/node@20.12.7):
     resolution: {integrity: sha512-OyZR+c1CE8yeHw5V5t59aXsUPPVTHMDjEZz8MgguLL/Q7NblxhZUlTu9xSPqlsUO/y+X7dlU05jdhvyycD55DA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4291,7 +4291,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.12.6
+      '@types/node': 20.12.7
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.14.1
