@@ -10,7 +10,7 @@ dependencies:
     version: 0.4.1
   ionicons:
     specifier: ^7.2.1
-    version: 7.3.1
+    version: 7.4.0
   vue:
     specifier: ^3.3.4
     version: 3.4.26(typescript@5.4.5)
@@ -18,7 +18,7 @@ dependencies:
 devDependencies:
   '@axe-core/playwright':
     specifier: ^4.8.1
-    version: 4.9.0(playwright-core@1.43.1)
+    version: 4.9.0(playwright-core@1.44.0)
   '@playwright/test':
     specifier: ^1.39.0
     version: 1.43.1
@@ -82,13 +82,13 @@ packages:
       leven: 3.1.0
     dev: true
 
-  /@axe-core/playwright@4.9.0(playwright-core@1.43.1):
+  /@axe-core/playwright@4.9.0(playwright-core@1.44.0):
     resolution: {integrity: sha512-Q1Lz75dNsX38jof+aev7RficDMdH/HLOLySkDdXR0fUoeFcLdw4UNgDO2CNNP4CTpoesEdfYRdd6VmDXjhBgbA==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
       axe-core: 4.9.0
-      playwright-core: 1.43.1
+      playwright-core: 1.44.0
     dev: true
 
   /@babel/code-frame@7.24.2:
@@ -1755,8 +1755,8 @@ packages:
     dev: true
     optional: true
 
-  /@stencil/core@4.15.0:
-    resolution: {integrity: sha512-C5syM3chCyxX0Os5M+ZWrBujjqwUfrTb87YiLr8RC+kMTmIpnRvvtj8/s3QYDGdDENGRxGkBpeboVh82IGqk0w==}
+  /@stencil/core@4.18.0:
+    resolution: {integrity: sha512-cN+nvjy0L8KyYq7N1bmswN/AcBustFlsAxfyPQ+fd3m98lPo53jNKIxKve1ZQ4ZmzSzYO7alDhZvjIesM0rl7w==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
     dev: false
@@ -2135,7 +2135,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001616
-      electron-to-chromium: 1.4.757
+      electron-to-chromium: 1.4.758
       node-releases: 2.0.14
       update-browserslist-db: 1.0.15(browserslist@4.23.0)
     dev: true
@@ -2485,8 +2485,8 @@ packages:
       jake: 10.9.1
     dev: true
 
-  /electron-to-chromium@1.4.757:
-    resolution: {integrity: sha512-jftDaCknYSSt/+KKeXzH3LX5E2CvRLm75P3Hj+J/dv3CL0qUYcOt13d5FN1NiL5IJbbhzHrb3BomeG2tkSlZmw==}
+  /electron-to-chromium@1.4.758:
+    resolution: {integrity: sha512-/o9x6TCdrYZBMdGeTifAP3wlF/gVT+TtWJe3BSmtNh92Mw81U9hrYwW9OAGUh+sEOX/yz5e34sksqRruZbjYrw==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -2969,10 +2969,10 @@ packages:
       side-channel: 1.0.6
     dev: true
 
-  /ionicons@7.3.1:
-    resolution: {integrity: sha512-1boG4EQTBBpQ4/0PU60Yi78Iw/k8iNtKu9c0NmsbzHGnWAcwpiovG9Wi/rk5UlF+DC+CR4XDCxKo91YqvAxkww==}
+  /ionicons@7.4.0:
+    resolution: {integrity: sha512-ZK94MMqgzMCPPMhmk8Ouu6goyVHFIlw/ACP6oe3FrikcI0N7CX0xcwVaEbUc0G/v3W0shI93vo+9ve/KpvcNhQ==}
     dependencies:
-      '@stencil/core': 4.15.0
+      '@stencil/core': 4.18.0
     dev: false
 
   /is-array-buffer@3.0.4:
@@ -3507,6 +3507,12 @@ packages:
 
   /playwright-core@1.43.1:
     resolution: {integrity: sha512-EI36Mto2Vrx6VF7rm708qSnesVQKbxEWvPrfA1IPY6HgczBplDx7ENtx+K2n4kJ41sLLkuGfmb0ZLSSXlDhqPg==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dev: true
+
+  /playwright-core@1.44.0:
+    resolution: {integrity: sha512-ZTbkNpFfYcGWohvTTl+xewITm7EOuqIqex0c7dNZ+aXsbrLj0qI8XlGKfPpipjm0Wny/4Lt4CJsWJk1stVS5qQ==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
