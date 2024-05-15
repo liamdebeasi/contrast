@@ -24,7 +24,7 @@ devDependencies:
     version: 1.43.1
   '@types/node':
     specifier: ^20.9.0
-    version: 20.12.9
+    version: 20.12.11
   '@vite-pwa/assets-generator':
     specifier: ^0.2.0
     version: 0.2.4
@@ -48,7 +48,7 @@ devDependencies:
     version: 5.4.5
   vite:
     specifier: ^5.0.0
-    version: 5.2.11(@types/node@20.12.9)
+    version: 5.2.11(@types/node@20.12.11)
   vite-plugin-pwa:
     specifier: ^0.20.0
     version: 0.20.0(@vite-pwa/assets-generator@0.2.4)(vite@5.2.11)(workbox-build@7.1.0)(workbox-window@7.1.0)
@@ -96,7 +96,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/highlight': 7.24.5
-      picocolors: 1.0.0
+      picocolors: 1.0.1
     dev: true
 
   /@babel/compat-data@7.24.4:
@@ -352,7 +352,7 @@ packages:
       '@babel/helper-validator-identifier': 7.24.5
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
     dev: true
 
   /@babel/parser@7.24.5:
@@ -1201,7 +1201,7 @@ packages:
       babel-plugin-polyfill-corejs2: 0.4.11(@babel/core@7.24.5)
       babel-plugin-polyfill-corejs3: 0.10.4(@babel/core@7.24.5)
       babel-plugin-polyfill-regenerator: 0.6.2(@babel/core@7.24.5)
-      core-js-compat: 3.37.0
+      core-js-compat: 3.37.1
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -1778,8 +1778,8 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
-  /@types/node@20.12.9:
-    resolution: {integrity: sha512-o93r47yu04MHumPBCFg0bMPBMNgtMg3jzbhl7e68z50+BMHmRMGDJv13eBlUgOdc9i/uoJXGMGYLtJV4ReTXEg==}
+  /@types/node@20.12.11:
+    resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1812,7 +1812,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.2.11(@types/node@20.12.9)
+      vite: 5.2.11(@types/node@20.12.11)
       vue: 3.4.26(typescript@5.4.5)
     dev: true
 
@@ -2063,7 +2063,7 @@ packages:
     dependencies:
       '@babel/core': 7.24.5
       '@babel/helper-define-polyfill-provider': 0.6.2(@babel/core@7.24.5)
-      core-js-compat: 3.37.0
+      core-js-compat: 3.37.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2134,10 +2134,10 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001617
-      electron-to-chromium: 1.4.761
+      caniuse-lite: 1.0.30001618
+      electron-to-chromium: 1.4.768
       node-releases: 2.0.14
-      update-browserslist-db: 1.0.15(browserslist@4.23.0)
+      update-browserslist-db: 1.0.16(browserslist@4.23.0)
     dev: true
 
   /buffer-from@1.1.2:
@@ -2182,8 +2182,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /caniuse-lite@1.0.30001617:
-    resolution: {integrity: sha512-mLyjzNI9I+Pix8zwcrpxEbGlfqOkF9kM3ptzmKNw5tizSyYwMe+nGLTqMK9cO+0E+Bh6TsBxNAaHWEM8xwSsmA==}
+  /caniuse-lite@1.0.30001618:
+    resolution: {integrity: sha512-p407+D1tIkDvsEAPS22lJxLQQaG8OTBEqo0KhzfABGk0TU4juBNDSfH0hyAp/HRyx+M8L17z/ltyhxh27FTfQg==}
     dev: true
 
   /chalk-template@0.4.0:
@@ -2335,8 +2335,8 @@ packages:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
     dev: true
 
-  /core-js-compat@3.37.0:
-    resolution: {integrity: sha512-vYq4L+T8aS5UuFg4UwDhc7YNRWVeVZwltad9C/jV3R2LgVOpS9BDr7l/WL6BN0dbV3k1XejPTHqqEzJgsa0frA==}
+  /core-js-compat@3.37.1:
+    resolution: {integrity: sha512-9TNiImhKvQqSUkOvk/mMRZzOANTiEVC7WaBNhHcKM7x+/5E1l5NvsysR19zuDQScE8k+kfQXWRN3AtS/eOSHpg==}
     dependencies:
       browserslist: 4.23.0
     dev: true
@@ -2485,8 +2485,8 @@ packages:
       jake: 10.9.1
     dev: true
 
-  /electron-to-chromium@1.4.761:
-    resolution: {integrity: sha512-PIbxpiJGx6Bb8dQaonNc6CGTRlVntdLg/2nMa1YhnrwYOORY9a3ZgGN0UQYE6lAcj/lkyduJN7BPt/JiY+jAQQ==}
+  /electron-to-chromium@1.4.768:
+    resolution: {integrity: sha512-z2U3QcvNuxdkk33YV7R1bVMNq7fL23vq3WfO5BHcqrm4TnDGReouBfYKLEFh5umoK1XACjEwp8mmnhXk2EJigw==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -3492,6 +3492,10 @@ packages:
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
+  /picocolors@1.0.1:
+    resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
+    dev: true
+
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
@@ -4303,15 +4307,15 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /update-browserslist-db@1.0.15(browserslist@4.23.0):
-    resolution: {integrity: sha512-K9HWH62x3/EalU1U6sjSZiylm9C8tgq2mSvshZpqc7QE69RaA2qjhkW2HlNA0tFpEbtyFz7HTqbSdN4MSwUodA==}
+  /update-browserslist-db@1.0.16(browserslist@4.23.0):
+    resolution: {integrity: sha512-KVbTxlBYlckhF5wgfyZXTWnMn7MMZjMu9XG8bPlliUOP9ThaF4QnhP8qrjrH7DRzHfSk0oQv1wToW+iA5GajEQ==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
       browserslist: 4.23.0
       escalade: 3.1.2
-      picocolors: 1.0.0
+      picocolors: 1.0.1
     dev: true
 
   /update-check@1.5.4:
@@ -4352,14 +4356,14 @@ packages:
       debug: 4.3.4
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 5.2.11(@types/node@20.12.9)
+      vite: 5.2.11(@types/node@20.12.11)
       workbox-build: 7.1.0
       workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@5.2.11(@types/node@20.12.9):
+  /vite@5.2.11(@types/node@20.12.11):
     resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4387,7 +4391,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.12.9
+      '@types/node': 20.12.11
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.17.2
