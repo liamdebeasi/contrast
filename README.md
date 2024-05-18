@@ -101,7 +101,7 @@ pnpm run test
 
 ## Contributing
 
-My day job involves building [Ionic Framework](http://github.com/ionic-team/ionic-framework), so I will fix bugs, add new features, and respond to questions as time allows. If you see a bug, please feel free to submit a pull request!
+I will fix bugs, add new features, and respond to questions as time allows. If you see a bug, please feel free to submit a pull request!
 
 ## Acknowledgments
 
