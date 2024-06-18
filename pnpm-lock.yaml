@@ -24,7 +24,7 @@ devDependencies:
     version: 1.44.1
   '@types/node':
     specifier: ^20.9.0
-    version: 20.14.1
+    version: 20.14.2
   '@vite-pwa/assets-generator':
     specifier: ^0.2.0
     version: 0.2.4
@@ -48,7 +48,7 @@ devDependencies:
     version: 5.4.5
   vite:
     specifier: ^5.0.0
-    version: 5.2.12(@types/node@20.14.1)
+    version: 5.2.12(@types/node@20.14.2)
   vite-plugin-pwa:
     specifier: ^0.20.0
     version: 0.20.0(@vite-pwa/assets-generator@0.2.4)(vite@5.2.12)(workbox-build@7.1.1)(workbox-window@7.1.0)
@@ -160,7 +160,7 @@ packages:
     dependencies:
       '@babel/compat-data': 7.24.7
       '@babel/helper-validator-option': 7.24.7
-      browserslist: 4.23.0
+      browserslist: 4.23.1
       lru-cache: 5.1.1
       semver: 6.3.1
     dev: true
@@ -1875,8 +1875,8 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
-  /@types/node@20.14.1:
-    resolution: {integrity: sha512-T2MzSGEu+ysB/FkWfqmhV3PLyQlowdptmmgD20C6QxsS8Fmv5SjpZ1ayXaEC0S21/h5UJ9iA6W/5vSNU5l00OA==}
+  /@types/node@20.14.2:
+    resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1909,7 +1909,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.2.12(@types/node@20.14.1)
+      vite: 5.2.12(@types/node@20.14.2)
       vue: 3.4.27(typescript@5.4.5)
     dev: true
 
@@ -2028,6 +2028,12 @@ packages:
 
   /acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
+  /acorn@8.12.0:
+    resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
@@ -2226,15 +2232,15 @@ packages:
       fill-range: 7.0.1
     dev: true
 
-  /browserslist@4.23.0:
-    resolution: {integrity: sha512-QW8HiM1shhT2GuzkvklfjcKDiWFXHOeFCIA/huJPwHsslwcydgk7X+z2zXpEijP98UCY7HbubZt5J2Zgvf0CaQ==}
+  /browserslist@4.23.1:
+    resolution: {integrity: sha512-TUfofFo/KsK/bWZ9TWQ5O26tsWW4Uhmt8IYklbnUa70udB6P2wA7w7o4PY4muaEPBQaAX+CEnmmIA41NVHtPVw==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001629
-      electron-to-chromium: 1.4.793
+      caniuse-lite: 1.0.30001636
+      electron-to-chromium: 1.4.804
       node-releases: 2.0.14
-      update-browserslist-db: 1.0.16(browserslist@4.23.0)
+      update-browserslist-db: 1.0.16(browserslist@4.23.1)
     dev: true
 
   /buffer-from@1.1.2:
@@ -2279,8 +2285,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /caniuse-lite@1.0.30001629:
-    resolution: {integrity: sha512-c3dl911slnQhmxUIT4HhYzT7wnBK/XYpGnYLOj4nJBaRiw52Ibe7YxlDaAeRECvA786zCuExhxIUJ2K7nHMrBw==}
+  /caniuse-lite@1.0.30001636:
+    resolution: {integrity: sha512-bMg2vmr8XBsbL6Lr0UHXy/21m84FTxDLWn2FSqMd5PrlbMxwJlQnC2YWYxVgp66PZE+BBNF2jYQUBKCo1FDeZg==}
     dev: true
 
   /chalk-template@0.4.0:
@@ -2435,7 +2441,7 @@ packages:
   /core-js-compat@3.37.1:
     resolution: {integrity: sha512-9TNiImhKvQqSUkOvk/mMRZzOANTiEVC7WaBNhHcKM7x+/5E1l5NvsysR19zuDQScE8k+kfQXWRN3AtS/eOSHpg==}
     dependencies:
-      browserslist: 4.23.0
+      browserslist: 4.23.1
     dev: true
 
   /cross-spawn@7.0.3:
@@ -2594,8 +2600,8 @@ packages:
       jake: 10.9.1
     dev: true
 
-  /electron-to-chromium@1.4.793:
-    resolution: {integrity: sha512-eGGzOCtlwNLVoMgOAXKLvesX6X7HM/KMJ+3x/yjcCBbZfpFhQvZUFvhnHxJT3jHJ8RpstR5npd0krWLPTCoh0g==}
+  /electron-to-chromium@1.4.804:
+    resolution: {integrity: sha512-gXMMs2m7aUTdZpORQAvMCyH0JHywSpZxjblSc/C81aDr34jh0hmpplTFcM4AYrYALVmiVT/r63oA3tEG1BPVRw==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -4265,7 +4271,7 @@ packages:
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.11.3
+      acorn: 8.12.0
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: true
@@ -4422,13 +4428,13 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /update-browserslist-db@1.0.16(browserslist@4.23.0):
+  /update-browserslist-db@1.0.16(browserslist@4.23.1):
     resolution: {integrity: sha512-KVbTxlBYlckhF5wgfyZXTWnMn7MMZjMu9XG8bPlliUOP9ThaF4QnhP8qrjrH7DRzHfSk0oQv1wToW+iA5GajEQ==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
-      browserslist: 4.23.0
+      browserslist: 4.23.1
       escalade: 3.1.2
       picocolors: 1.0.1
     dev: true
@@ -4471,14 +4477,14 @@ packages:
       debug: 4.3.4
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 5.2.12(@types/node@20.14.1)
+      vite: 5.2.12(@types/node@20.14.2)
       workbox-build: 7.1.1
       workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@5.2.12(@types/node@20.14.1):
+  /vite@5.2.12(@types/node@20.14.2):
     resolution: {integrity: sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4506,7 +4512,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.14.1
+      '@types/node': 20.14.2
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.18.0
