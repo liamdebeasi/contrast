@@ -6,6 +6,11 @@
   semanticCommits: 'enabled',
   packageRules: [
     {
+      matchUpdateTypes: ['minor', 'patch'],
+      matchCurrentVersion: '!/^0/',
+      automerge: true
+    },
+    {
       matchPackageNames: ['vue', 'vue-tsc'],
       groupName: 'vue'
     },
