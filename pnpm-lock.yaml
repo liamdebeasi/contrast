@@ -36,7 +36,7 @@ devDependencies:
     version: 5.3.0
   execa:
     specifier: ^9.0.0
-    version: 9.1.0
+    version: 9.2.0
   generator:
     specifier: link:@vite-pwa@assets/generator
     version: link:@vite-pwa@assets/generator
@@ -2754,9 +2754,9 @@ packages:
       strip-final-newline: 2.0.0
     dev: true
 
-  /execa@9.1.0:
-    resolution: {integrity: sha512-lSgHc4Elo2m6bUDhc3Hl/VxvUDJdQWI40RZ4KMY9bKRc+hgMOT7II/JjbNDhI8VnMtrCb7U/fhpJIkLORZozWw==}
-    engines: {node: '>=18'}
+  /execa@9.2.0:
+    resolution: {integrity: sha512-vpOyYg7UAVKLAWWtRS2gAdgkT7oJbCn0me3gmUmxZih4kd3MF/oo8kNTBTIbkO3yuuF5uB4ZCZfn8BOolITYhg==}
+    engines: {node: ^18.19.0 || >=20.5.0}
     dependencies:
       '@sindresorhus/merge-streams': 4.0.0
       cross-spawn: 7.0.3
