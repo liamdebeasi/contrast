@@ -24,7 +24,7 @@ devDependencies:
     version: 1.44.1
   '@types/node':
     specifier: ^20.9.0
-    version: 20.14.3
+    version: 20.14.4
   '@vite-pwa/assets-generator':
     specifier: ^0.2.0
     version: 0.2.4
@@ -48,7 +48,7 @@ devDependencies:
     version: 5.4.5
   vite:
     specifier: ^5.0.0
-    version: 5.3.1(@types/node@20.14.3)
+    version: 5.3.1(@types/node@20.14.4)
   vite-plugin-pwa:
     specifier: ^0.20.0
     version: 0.20.0(@vite-pwa/assets-generator@0.2.4)(vite@5.3.1)(workbox-build@7.1.1)(workbox-window@7.1.0)
@@ -1848,8 +1848,8 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
-  /@types/node@20.14.3:
-    resolution: {integrity: sha512-Nuzqa6WAxeGnve6SXqiPAM9rA++VQs+iLZ1DDd56y0gdvygSZlQvZuvdFPR3yLqkVxPu4WrO02iDEyH1g+wazw==}
+  /@types/node@20.14.4:
+    resolution: {integrity: sha512-1ChboN+57suCT2t/f8lwtPY/k3qTpuD/qnqQuYoBg6OQOcPyaw7PiZVdGpaZYAvhDDtqrt0oAaM8+oSu1xsUGw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1882,7 +1882,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.3.1(@types/node@20.14.3)
+      vite: 5.3.1(@types/node@20.14.4)
       vue: 3.4.29(typescript@5.4.5)
     dev: true
 
@@ -4453,14 +4453,14 @@ packages:
       debug: 4.3.4
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 5.3.1(@types/node@20.14.3)
+      vite: 5.3.1(@types/node@20.14.4)
       workbox-build: 7.1.1
       workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@5.3.1(@types/node@20.14.3):
+  /vite@5.3.1(@types/node@20.14.4):
     resolution: {integrity: sha512-XBmSKRLXLxiaPYamLv3/hnP/KXDai1NDexN0FpkTaZXTfycHvkRHoenpgl/fvuK/kPbB6xAgoyiryAhQNxYmAQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4488,7 +4488,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
       esbuild: 0.21.5
       postcss: 8.4.38
       rollup: 4.18.0
