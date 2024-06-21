@@ -10,8 +10,8 @@
     "test": "playwright test",
     "generate-assets": "pwa-assets-generator",
     "docker.build": "docker build -t contrast-playwright .",
-    "test.docker": "npm run docker.build && node ./scripts/docker.mjs",
-    "test.docker.ci": "npm run docker.build && CI=true node ./scripts/docker.mjs"
+    "test.docker": "pnpm docker.build && node ./scripts/docker.mjs",
+    "test.docker.ci": "pnpm docker.build && CI=true node ./scripts/docker.mjs"
   },
   "dependencies": {
     "color-contrast-calc": "^0.4.1",
