@@ -30,7 +30,7 @@ devDependencies:
     version: 0.2.4
   '@vitejs/plugin-vue':
     specifier: ^5.0.0
-    version: 5.0.5(vite@5.3.1)(vue@3.4.30)
+    version: 5.0.5(vite@5.3.2)(vue@3.4.30)
   chalk:
     specifier: ^5.3.0
     version: 5.3.0
@@ -48,10 +48,10 @@ devDependencies:
     version: 5.5.2
   vite:
     specifier: ^5.0.0
-    version: 5.3.1(@types/node@20.14.9)
+    version: 5.3.2(@types/node@20.14.9)
   vite-plugin-pwa:
     specifier: ^0.20.0
-    version: 0.20.0(@vite-pwa/assets-generator@0.2.4)(vite@5.3.1)(workbox-build@7.1.1)(workbox-window@7.1.0)
+    version: 0.20.0(@vite-pwa/assets-generator@0.2.4)(vite@5.3.2)(workbox-build@7.1.1)(workbox-window@7.1.0)
   vue-tsc:
     specifier: ^2.0.0
     version: 2.0.22(typescript@5.5.2)
@@ -1875,14 +1875,14 @@ packages:
       unconfig: 0.3.11
     dev: true
 
-  /@vitejs/plugin-vue@5.0.5(vite@5.3.1)(vue@3.4.30):
+  /@vitejs/plugin-vue@5.0.5(vite@5.3.2)(vue@3.4.30):
     resolution: {integrity: sha512-LOjm7XeIimLBZyzinBQ6OSm3UBCNVCpLkxGC0oWmm2YPzVZoxMsdvNVimLTBzpAnR9hl/yn1SHGuRfe6/Td9rQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.3.1(@types/node@20.14.9)
+      vite: 5.3.2(@types/node@20.14.9)
       vue: 3.4.30(typescript@5.5.2)
     dev: true
 
@@ -1929,7 +1929,7 @@ packages:
       '@vue/shared': 3.4.30
       estree-walker: 2.0.2
       magic-string: 0.30.10
-      postcss: 8.4.38
+      postcss: 8.4.39
       source-map-js: 1.2.0
 
   /@vue/compiler-ssr@3.4.30:
@@ -2212,7 +2212,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001638
-      electron-to-chromium: 1.4.814
+      electron-to-chromium: 1.4.815
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
     dev: true
@@ -2574,8 +2574,8 @@ packages:
       jake: 10.9.1
     dev: true
 
-  /electron-to-chromium@1.4.814:
-    resolution: {integrity: sha512-GVulpHjFu1Y9ZvikvbArHmAhZXtm3wHlpjTMcXNGKl4IQ4jMQjlnz8yMQYYqdLHKi/jEL2+CBC2akWVCoIGUdw==}
+  /electron-to-chromium@1.4.815:
+    resolution: {integrity: sha512-OvpTT2ItpOXJL7IGcYakRjHCt8L5GrrN/wHCQsRB4PQa1X9fe+X9oen245mIId7s14xvArCGSTIq644yPUKKLg==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -3628,8 +3628,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /postcss@8.4.38:
-    resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
+  /postcss@8.4.39:
+    resolution: {integrity: sha512-0vzE+lAiG7hZl1/9I8yzKLx3aR9Xbof3fBHKunvMfOCYAtMhrsnccJY2iTURb9EZd5+pLuiNV9/c/GZJOHsgIw==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.7
@@ -4437,7 +4437,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite-plugin-pwa@0.20.0(@vite-pwa/assets-generator@0.2.4)(vite@5.3.1)(workbox-build@7.1.1)(workbox-window@7.1.0):
+  /vite-plugin-pwa@0.20.0(@vite-pwa/assets-generator@0.2.4)(vite@5.3.2)(workbox-build@7.1.1)(workbox-window@7.1.0):
     resolution: {integrity: sha512-/kDZyqF8KqoXRpMUQtR5Atri/7BWayW8Gp7Kz/4bfstsV6zSFTxjREbXZYL7zSuRL40HGA+o2hvUAFRmC+bL7g==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -4453,15 +4453,15 @@ packages:
       debug: 4.3.4
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 5.3.1(@types/node@20.14.9)
+      vite: 5.3.2(@types/node@20.14.9)
       workbox-build: 7.1.1
       workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@5.3.1(@types/node@20.14.9):
-    resolution: {integrity: sha512-XBmSKRLXLxiaPYamLv3/hnP/KXDai1NDexN0FpkTaZXTfycHvkRHoenpgl/fvuK/kPbB6xAgoyiryAhQNxYmAQ==}
+  /vite@5.3.2(@types/node@20.14.9):
+    resolution: {integrity: sha512-6lA7OBHBlXUxiJxbO5aAY2fsHHzDr1q7DvXYnyZycRs2Dz+dXBWuhpWHvmljTRTpQC2uvGmUFFkSHF2vGo90MA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -4490,7 +4490,7 @@ packages:
     dependencies:
       '@types/node': 20.14.9
       esbuild: 0.21.5
-      postcss: 8.4.38
+      postcss: 8.4.39
       rollup: 4.18.0
     optionalDependencies:
       fsevents: 2.3.3
