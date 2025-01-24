@@ -21,7 +21,7 @@ jobs:
         with:
           version: 8
       - name: Install Dependencies
-        run: ls && pnpm install
+        run: ls && pnpm install --frozen-lockfile
         shell: sh
       - name: Build Application
         run: pnpm run build
