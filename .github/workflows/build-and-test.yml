@@ -2,7 +2,7 @@ name: Build app and run tests
 
 on:
   pull_request:
-    branches: [ '**' ]
+    branches: ["**"]
 
 concurrency:
   # Cancel in progress runs for this branch
@@ -21,7 +21,7 @@ jobs:
         with:
           version: 8
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
         shell: sh
       - name: Build Application
         run: pnpm run build
