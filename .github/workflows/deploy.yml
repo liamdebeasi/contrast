@@ -30,7 +30,7 @@ jobs:
         with:
           version: 8
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
         shell: sh
       - name: Build Application
         run: BASE_PATH='/contrast/' pnpm run build
