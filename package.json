@@ -29,7 +29,7 @@
     "generator": "link:@vite-pwa@assets/generator",
     "serve": "^14.2.1",
     "typescript": "^5.0.2",
-    "vite": "^5.0.0",
+    "vite": "^6.0.0",
     "vite-plugin-pwa": "^0.21.0",
     "vue-tsc": "^2.0.0"
   }
