@@ -55,19 +55,19 @@ The clipboard icon can be used to copy the foreground or background color to you
 
 The color contrast ratio will be displayed at the top of the screen. The color contrast levels for each type of web content test will be displayed below that. The table below lists the possible results for each content type:
 
-| Content Type | Possible Values |
-| - | - |
-| Small Text | A/Fail, AA, AAA |
-| Large Text | A/Fail, AA, AAA |
-| UI Components | A/Fail, AA |
+| Content Type  | Possible Values |
+| ------------- | --------------- |
+| Small Text    | A/Fail, AA, AAA |
+| Large Text    | A/Fail, AA, AAA |
+| UI Components | A/Fail, AA      |
 
 ## Browser Support
 
-| Browser | Version |
-| - | - |
-| Safari | 16+ [^1] |
+| Browser     | Version   |
+| ----------- | --------- |
+| Safari      | 16+ [^1]  |
 | Chrome/Edge | 100+ [^2] |
-| Firefox | 100+ [^1] |
+| Firefox     | 100+ [^1] |
 
 Contrast likely works on older versions of these browsers. However, I work on this project in my free time, so I intentionally kept the browser support scope narrow.
 
@@ -90,13 +90,16 @@ pnpm run dev
 Contrast uses [Playwright](https://playwright.dev) and [Axe](https://github.com/dequelabs/axe-core) for testing.
 
 ```shell
-# Installs the latest browsers if needed. 
+# Installs the latest browsers if needed.
 # You only need to do this on first setup and
 # whenever the Playwright dependency is updated.
 pnpm playwright install
 
 # Run tests
-pnpm run test
+pnpm test
+
+# Update screenshots
+pnpm test.docker.ci --update-snapshots
 ```
 
 ## Contributing
@@ -108,5 +111,4 @@ I will fix bugs, add new features, and respond to questions as time allows. If y
 Contrast was inspired by https://contrasteapp.com. Thanks for making such a great app!
 
 [^1]: As of November 2023, Safari and Firefox do not support the [EyeDropper API](https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper), so the eye dropper feature is not available in those browsers. However, using the color palette picker lets you access an eye dropper tool once the color palette picker menu appears.
-
 [^2]: As of November 2023, there is a known bug in Blink (the engine that powers Chrome and Edge) that causes the color palette picker to not appear when Contrast is installed on macOS. This issue should be resolved with the upcoming Chrome v121 release. See https://bugs.chromium.org/p/chromium/issues/detail?id=1488347 for more information.

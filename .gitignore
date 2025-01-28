@@ -29,3 +29,6 @@ dist-ssr
 
 # local playwright screenshots
 *-darwin.png
+
+docker-display-volume.txt
+docker-display.txt
