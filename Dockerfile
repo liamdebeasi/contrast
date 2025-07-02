@@ -1,5 +1,5 @@
 # Get Playwright
-FROM mcr.microsoft.com/playwright:v1.50.1
+FROM mcr.microsoft.com/playwright:v1.53.2
 
 # Enable corepack which lets us use pnpm
 RUN corepack enable
