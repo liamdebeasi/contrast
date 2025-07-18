@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "color-contrast-calc": "^0.4.1",
-    "ionicons": "^7.2.1",
+    "ionicons": "^8.0.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
