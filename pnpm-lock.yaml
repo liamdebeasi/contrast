@@ -26,13 +26,13 @@ importers:
         version: 1.54.1
       '@types/node':
         specifier: ^22.0.0
-        version: 22.16.5
+        version: 22.17.0
       '@vite-pwa/assets-generator':
         specifier: ^1.0.0
         version: 1.0.0
       '@vitejs/plugin-vue':
         specifier: ^6.0.0
-        version: 6.0.1(vite@7.0.6(@types/node@22.16.5)(jiti@2.4.2)(terser@5.43.1))(vue@3.5.18(typescript@5.8.3))
+        version: 6.0.1(vite@7.0.6(@types/node@22.17.0)(jiti@2.4.2)(terser@5.43.1))(vue@3.5.18(typescript@5.8.3))
       chalk:
         specifier: ^5.3.0
         version: 5.4.1
@@ -50,10 +50,10 @@ importers:
         version: 5.8.3
       vite:
         specifier: ^7.0.0
-        version: 7.0.6(@types/node@22.16.5)(jiti@2.4.2)(terser@5.43.1)
+        version: 7.0.6(@types/node@22.17.0)(jiti@2.4.2)(terser@5.43.1)
       vite-plugin-pwa:
         specifier: ^1.0.0
-        version: 1.0.2(@vite-pwa/assets-generator@1.0.0)(vite@7.0.6(@types/node@22.16.5)(jiti@2.4.2)(terser@5.43.1))(workbox-build@7.1.1)(workbox-window@7.1.0)
+        version: 1.0.2(@vite-pwa/assets-generator@1.0.0)(vite@7.0.6(@types/node@22.17.0)(jiti@2.4.2)(terser@5.43.1))(workbox-build@7.1.1)(workbox-window@7.1.0)
       vue-tsc:
         specifier: ^3.0.0
         version: 3.0.4(typescript@5.8.3)
@@ -1075,8 +1075,8 @@ packages:
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
-  '@types/node@22.16.5':
-    resolution: {integrity: sha512-bJFoMATwIGaxxx8VJPeM8TonI8t579oRvgAuT8zFugJsJZgzqv0Fu8Mhp68iecjzG7cnN3mO2dJQ5uUM2EFrgQ==}
+  '@types/node@22.17.0':
+    resolution: {integrity: sha512-bbAKTCqX5aNVryi7qXVMi+OkB3w/OyblodicMbvE38blyAz7GxXf6XYhklokijuPwwVg9sDLKRxt0ZHXQwZVfQ==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -1443,8 +1443,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.5.192:
-    resolution: {integrity: sha512-rP8Ez0w7UNw/9j5eSXCe10o1g/8B1P5SM90PCCMVkIRQn2R0LEHWz4Eh9RnxkniuDe1W0cTSOB3MLlkTGDcuCg==}
+  electron-to-chromium@1.5.194:
+    resolution: {integrity: sha512-SdnWJwSUot04UR51I2oPD8kuP2VI37/CADR1OHsFOUzZIvfWJBO6q11k5P/uKNyTT3cdOsnyjkrZ+DDShqYqJA==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -3579,7 +3579,7 @@ snapshots:
 
   '@types/estree@1.0.8': {}
 
-  '@types/node@22.16.5':
+  '@types/node@22.17.0':
     dependencies:
       undici-types: 6.21.0
 
@@ -3596,10 +3596,10 @@ snapshots:
       sharp-ico: 0.1.5
       unconfig: 7.3.2
 
-  '@vitejs/plugin-vue@6.0.1(vite@7.0.6(@types/node@22.16.5)(jiti@2.4.2)(terser@5.43.1))(vue@3.5.18(typescript@5.8.3))':
+  '@vitejs/plugin-vue@6.0.1(vite@7.0.6(@types/node@22.17.0)(jiti@2.4.2)(terser@5.43.1))(vue@3.5.18(typescript@5.8.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.29
-      vite: 7.0.6(@types/node@22.16.5)(jiti@2.4.2)(terser@5.43.1)
+      vite: 7.0.6(@types/node@22.17.0)(jiti@2.4.2)(terser@5.43.1)
       vue: 3.5.18(typescript@5.8.3)
 
   '@volar/language-core@2.4.20':
@@ -3805,7 +3805,7 @@ snapshots:
   browserslist@4.25.1:
     dependencies:
       caniuse-lite: 1.0.30001731
-      electron-to-chromium: 1.5.192
+      electron-to-chromium: 1.5.194
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.25.1)
 
@@ -3990,7 +3990,7 @@ snapshots:
     dependencies:
       jake: 10.9.2
 
-  electron-to-chromium@1.5.192: {}
+  electron-to-chromium@1.5.194: {}
 
   emoji-regex@8.0.0: {}
 
@@ -5080,12 +5080,12 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-pwa@1.0.2(@vite-pwa/assets-generator@1.0.0)(vite@7.0.6(@types/node@22.16.5)(jiti@2.4.2)(terser@5.43.1))(workbox-build@7.1.1)(workbox-window@7.1.0):
+  vite-plugin-pwa@1.0.2(@vite-pwa/assets-generator@1.0.0)(vite@7.0.6(@types/node@22.17.0)(jiti@2.4.2)(terser@5.43.1))(workbox-build@7.1.1)(workbox-window@7.1.0):
     dependencies:
       debug: 4.4.1
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.14
-      vite: 7.0.6(@types/node@22.16.5)(jiti@2.4.2)(terser@5.43.1)
+      vite: 7.0.6(@types/node@22.17.0)(jiti@2.4.2)(terser@5.43.1)
       workbox-build: 7.1.1
       workbox-window: 7.1.0
     optionalDependencies:
@@ -5093,7 +5093,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite@7.0.6(@types/node@22.16.5)(jiti@2.4.2)(terser@5.43.1):
+  vite@7.0.6(@types/node@22.17.0)(jiti@2.4.2)(terser@5.43.1):
     dependencies:
       esbuild: 0.25.8
       fdir: 6.4.6(picomatch@4.0.3)
@@ -5102,7 +5102,7 @@ snapshots:
       rollup: 4.45.3
       tinyglobby: 0.2.14
     optionalDependencies:
-      '@types/node': 22.16.5
+      '@types/node': 22.17.0
       fsevents: 2.3.3
       jiti: 2.4.2
       terser: 5.43.1
