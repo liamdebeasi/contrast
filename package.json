@@ -28,7 +28,7 @@
     "execa": "^9.0.0",
     "generator": "link:@vite-pwa@assets/generator",
     "serve": "^14.2.1",
-    "typescript": "^5.0.2",
+    "typescript": "^6.0.0",
     "vite": "^7.0.0",
     "vite-plugin-pwa": "^1.0.0",
     "vue-tsc": "^3.0.0"
