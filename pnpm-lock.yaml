@@ -26,13 +26,13 @@ importers:
         version: 1.56.1
       '@types/node':
         specifier: ^24.0.0
-        version: 24.12.2
+        version: 24.12.3
       '@vite-pwa/assets-generator':
         specifier: ^1.0.0
         version: 1.0.2
       '@vitejs/plugin-vue':
         specifier: ^6.0.0
-        version: 6.0.6(vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(terser@5.47.1))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.6(vite@8.0.11(@types/node@24.12.3)(jiti@2.6.1)(terser@5.47.1))(vue@3.5.34(typescript@6.0.3))
       chalk:
         specifier: ^5.3.0
         version: 5.6.2
@@ -50,10 +50,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: ^8.0.0
-        version: 8.0.11(@types/node@24.12.2)(jiti@2.6.1)(terser@5.47.1)
+        version: 8.0.11(@types/node@24.12.3)(jiti@2.6.1)(terser@5.47.1)
       vite-plugin-pwa:
         specifier: ^1.0.0
-        version: 1.3.0(@vite-pwa/assets-generator@1.0.2)(vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(terser@5.47.1))(workbox-build@7.1.1)(workbox-window@7.1.0)
+        version: 1.3.0(@vite-pwa/assets-generator@1.0.2)(vite@8.0.11(@types/node@24.12.3)(jiti@2.6.1)(terser@5.47.1))(workbox-build@7.1.1)(workbox-window@7.1.0)
       vue-tsc:
         specifier: ^3.0.0
         version: 3.2.8(typescript@6.0.3)
@@ -958,8 +958,8 @@ packages:
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
 
-  '@types/node@24.12.2':
-    resolution: {integrity: sha512-A1sre26ke7HDIuY/M23nd9gfB+nrmhtYyMINbjI1zHJxYteKR6qSMX56FsmjMcDb3SMcjJg5BiRRgOCC/yBD0g==}
+  '@types/node@24.12.3':
+    resolution: {integrity: sha512-8oljBDGun9cIsZRJR6fkihn0TSXJI0UDOOhncYaERq6M0JMDoPLxyscwruJcb4GKS6dvK/d8xebYBg27h/duaQ==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -1107,8 +1107,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  baseline-browser-mapping@2.10.28:
-    resolution: {integrity: sha512-Ic44hnOtFIgravCunj1ifSoQPSUrkNiJuH9Mf6jr2jjoA74icqV8wU0KuadXeOR8zuIJMOoTv0GuQjZ9ZYNMeA==}
+  baseline-browser-mapping@2.10.29:
+    resolution: {integrity: sha512-Asa2krT+XTPZINCS+2QcyS8WTkObE77RwkydwF7h6DmnKqbvlalz93m/dnphUyCa6SWSP51VgtEUf2FN+gelFQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -3462,7 +3462,7 @@ snapshots:
 
   '@types/estree@1.0.9': {}
 
-  '@types/node@24.12.2':
+  '@types/node@24.12.3':
     dependencies:
       undici-types: 7.16.0
 
@@ -3479,10 +3479,10 @@ snapshots:
       sharp-ico: 0.1.5
       unconfig: 7.3.3
 
-  '@vitejs/plugin-vue@6.0.6(vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(terser@5.47.1))(vue@3.5.34(typescript@6.0.3))':
+  '@vitejs/plugin-vue@6.0.6(vite@8.0.11(@types/node@24.12.3)(jiti@2.6.1)(terser@5.47.1))(vue@3.5.34(typescript@6.0.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-rc.13
-      vite: 8.0.11(@types/node@24.12.2)(jiti@2.6.1)(terser@5.47.1)
+      vite: 8.0.11(@types/node@24.12.3)(jiti@2.6.1)(terser@5.47.1)
       vue: 3.5.34(typescript@6.0.3)
 
   '@volar/language-core@2.4.28':
@@ -3652,7 +3652,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  baseline-browser-mapping@2.10.28: {}
+  baseline-browser-mapping@2.10.29: {}
 
   boxen@7.0.0:
     dependencies:
@@ -3676,7 +3676,7 @@ snapshots:
 
   browserslist@4.28.2:
     dependencies:
-      baseline-browser-mapping: 2.10.28
+      baseline-browser-mapping: 2.10.29
       caniuse-lite: 1.0.30001792
       electron-to-chromium: 1.5.353
       node-releases: 2.0.38
@@ -4955,12 +4955,12 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-pwa@1.3.0(@vite-pwa/assets-generator@1.0.2)(vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(terser@5.47.1))(workbox-build@7.1.1)(workbox-window@7.1.0):
+  vite-plugin-pwa@1.3.0(@vite-pwa/assets-generator@1.0.2)(vite@8.0.11(@types/node@24.12.3)(jiti@2.6.1)(terser@5.47.1))(workbox-build@7.1.1)(workbox-window@7.1.0):
     dependencies:
       debug: 4.4.3
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.16
-      vite: 8.0.11(@types/node@24.12.2)(jiti@2.6.1)(terser@5.47.1)
+      vite: 8.0.11(@types/node@24.12.3)(jiti@2.6.1)(terser@5.47.1)
       workbox-build: 7.1.1
       workbox-window: 7.1.0
     optionalDependencies:
@@ -4968,7 +4968,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(terser@5.47.1):
+  vite@8.0.11(@types/node@24.12.3)(jiti@2.6.1)(terser@5.47.1):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -4976,7 +4976,7 @@ snapshots:
       rolldown: 1.0.0-rc.18
       tinyglobby: 0.2.16
     optionalDependencies:
-      '@types/node': 24.12.2
+      '@types/node': 24.12.3
       fsevents: 2.3.3
       jiti: 2.6.1
       terser: 5.47.1
