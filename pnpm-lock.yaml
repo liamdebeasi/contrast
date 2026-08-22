@@ -34,8 +34,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.8(vite@8.2.1(@types/node@24.13.3)(jiti@2.6.1)(terser@5.48.0))(vue@3.5.41(typescript@6.0.3))
       chalk:
-        specifier: ^5.3.0
-        version: 5.6.2
+        specifier: ^6.0.0
+        version: 6.0.0
       execa:
         specifier: ^9.0.0
         version: 9.6.1
@@ -1301,6 +1301,10 @@ packages:
   chalk@5.6.2:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+
+  chalk@6.0.0:
+    resolution: {integrity: sha512-2uNTXIuTTxk7ciZgAU1BQcgnchcG0xXnrs6jzkQfj9SsRa9M2s5zE8WT96hS6KmG4MzWHSrvH43DF1m4XRkrFg==}
+    engines: {node: '>=22'}
 
   cli-boxes@3.0.0:
     resolution: {integrity: sha512-/lzGpEWL/8PfI0BmBOPRwp0c/wFNX1RdUML3jK/RcSBA9T8mZDdQpqYBKtCFTOfQbwPqWEOpjqW+Fnayc0969g==}
@@ -3900,6 +3904,8 @@ snapshots:
   chalk@5.0.1: {}
 
   chalk@5.6.2: {}
+
+  chalk@6.0.0: {}
 
   cli-boxes@3.0.0: {}
 
