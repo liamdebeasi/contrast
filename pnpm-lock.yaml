@@ -13,7 +13,7 @@ importers:
         version: 0.4.1
       ionicons:
         specifier: ^8.0.0
-        version: 8.1.0
+        version: 8.1.1
       vue:
         specifier: ^3.3.4
         version: 3.5.45(typescript@6.0.3)
@@ -1872,8 +1872,8 @@ packages:
     resolution: {integrity: sha512-4gd7VpWNQNB4UKKCFFVcp1AVv+FMOgs9NKzjHKusc8jTMhd5eL1NqQqOpE0KzMds804/yHlglp3uxgluOqAPLw==}
     engines: {node: '>= 0.4'}
 
-  ionicons@8.1.0:
-    resolution: {integrity: sha512-XSM2gYWTXxSYTwjmKWAoy4yR7AbAFDjpc5ZIivAiGXskM0fe5CdMPfs6InQRUcrYtVb2WZ/0HQ1/jeh3JW78SA==}
+  ionicons@8.1.1:
+    resolution: {integrity: sha512-VJjbZjjyzFmI0MAtlUKRprLpD4MbGbwcijk2aduu/a3jhGhlSUC/tQ2wM3p0/SF44/oDFdl0bdZMya3rZxnoyg==}
 
   is-array-buffer@3.0.5:
     resolution: {integrity: sha512-DDfANUiiG2wC1qawP66qlTugJeL5HyzMpfr8lLK+jMQirGzNod0B12cFB/9q838Ru27sBwfw78/rdoU7RERz6A==}
@@ -4701,7 +4701,7 @@ snapshots:
       hasown: 2.0.4
       side-channel: 1.1.1
 
-  ionicons@8.1.0:
+  ionicons@8.1.1:
     dependencies:
       '@stencil/core': 4.43.5
 
